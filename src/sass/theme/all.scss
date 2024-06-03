@@ -14,6 +14,11 @@ body {
     color: #555555;
     position: relative;
     visibility: visible;
+    background-image: url(../../assets/images/bg-body.webp);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .section-padding {
@@ -28,6 +33,21 @@ body {
 .text-danger {
     color: rgb(220 53 69) !important;
 }
+
+.gradient {
+    background: #041675;
+}
+
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+
 a {
     transition: all 0.5s ease 0s;
     color: inherit;
@@ -43,7 +63,7 @@ a {
     background-color: map.get($theme-colors, "main") !important;
 }
 
-.align-items-center {
+.items-center {
     text-align: center !important;
 }
 
@@ -183,4 +203,14 @@ ul {
     border-radius: 3px;
     border: 1px solid transparent;
     line-height: 1;
+}
+
+.section-title h2 {
+    text-align: center;
+    text-transform: capitalize;
+    color: #041675;
+    margin: 0 auto 40px;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: bold;
 }

@@ -1,13 +1,14 @@
 // src/components/ProductList.js
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts } from "../../features/product/productSlice";
+import { fetchProducts } from "../../redux/features/product/productSlice";
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { FaCodeCompare } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import "./product.scss";
 import Slider from "react-slick";
+import { onSaleProductSlice } from "redux/features/product/onSaleProductSlice";
 
 const OnSaleProduct = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const OnSaleProduct = () => {
 
   useEffect(() => {
     if (status === "idle") {
-      dispatch(fetchProducts());
+      dispatch(onSaleProductSlice());
     }
   }, [dispatch, status]);
 
@@ -63,7 +64,7 @@ const OnSaleProduct = () => {
   return (
     <div>
       <Slider {...Settings2row}>
-      {products?.map((item, index) => (
+        {products?.map((item, index) => (
           <div className="product" key={index}>
             <div className="thumb">
               <Link to="" className="image">
