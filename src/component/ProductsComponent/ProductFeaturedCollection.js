@@ -1,20 +1,12 @@
 // src/components/ProductList.js
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts } from "../../features/product/productSlice";
+import { fetchProducts } from "../../redux/features/product/productSlice";
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { FaCodeCompare } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import "./product.scss";
-import productImage1 from "../../assets/images/product/1.webp";
-import productImage2 from "../../assets/images/product/2.webp";
-import productImage3 from "../../assets/images/product/3.webp";
-import productImage4 from "../../assets/images/product/4.webp";
-import productImage5 from "../../assets/images/product/5.webp";
-import productImage6 from "../../assets/images/product/6.webp";
-import productImage7 from "../../assets/images/product/7.webp";
-import productImage8 from "../../assets/images/product/8.webp";
 import Slider from "react-slick";
 
 const ProductFeaturedCollection = () => {
@@ -29,6 +21,7 @@ const ProductFeaturedCollection = () => {
     }
   }, [dispatch, status]);
 
+
   if (status === "loading") {
     return <div>Loading...</div>;
   }
@@ -36,7 +29,8 @@ const ProductFeaturedCollection = () => {
   if (status === "failed") {
     return <div>Error: {error}</div>;
   }
-
+  // const FeaturedProduct = products.sort((a, b) => b.wislist - a.wislist);
+  const sortedOnSaleItems = [...products].sort((a, b) => b.wislist - a.wislist);
   const Settings2row = {
     className: "center",
     centerPadding: "40px",
@@ -71,7 +65,7 @@ const ProductFeaturedCollection = () => {
   return (
     <div>
       <Slider {...Settings2row}>
-      {products?.map((item, index) => (
+        {sortedOnSaleItems?.map((item, index) => (
           <div className="product" key={index}>
             <div className="thumb">
               <Link to="" className="image">

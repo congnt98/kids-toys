@@ -1,5 +1,4 @@
 import { memo, useState } from "react";
-import Carousel from "react-multi-carousel";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -18,24 +17,14 @@ import productImage8 from "../../assets/images/product/8.webp";
 import post1 from "../../assets/images/post/1.webp";
 import post2 from "../../assets/images/post/2.webp";
 import post3 from "../../assets/images/post/3.webp";
-import banner1 from "../../assets/images/banner/slider2-1.webp";
-import banner2 from "../../assets/images/banner/slider2-2.webp";
 
 import Rating from "react-rating";
-import { FaRegHeart } from "react-icons/fa";
-import { FaCodeCompare } from "react-icons/fa6";
-import { CiSearch } from "react-icons/ci";
 
-import { useSelector } from "react-redux";
-import axios from "axios";
-import ProductList from "../../component/ProductsComponent/ProductFeaturedCollection";
-import ProductFeaturedCollection from "../../component/ProductsComponent/ProductFeaturedCollection";
+import Banner from "Layout/Banner/Banner";
+import FeaturedCategories from "Layout/FeaturedCategories/FeaturedCategories";
+import ProductFeaturedCollection from "component/ProductsComponent/ProductFeaturedCollection";
 
 const HomePage = () => {
-  // const [product,setProduct] = useState([])
-  // const listProduct = useSelector((stage) => stage.product);
-
-
   const Settings3row = {
     className: "center",
     centerPadding: "40px",
@@ -68,7 +57,6 @@ const HomePage = () => {
     ],
   };
 
-
   const Settings = {
     infinite: true,
     speed: 500,
@@ -98,29 +86,6 @@ const HomePage = () => {
       },
     ],
   };
-
-  const SettingsFull = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
-  const ListBanerHero = [
-    {
-      img: banner1,
-      title: " New Arrivals ",
-      title1: "Amazing Craft ",
-      text: "Latest baby product & toy collections.",
-      sale: "20",
-    },
-    {
-      img: banner2,
-      title: "Get -30% off",
-      text: "Latest baby product & toy collections.",
-      sale: "20",
-    },
-  ];
 
   const ListProduct = [
     {
@@ -200,26 +165,6 @@ const HomePage = () => {
     },
   ];
 
-  const bannerHero = ListBanerHero?.map((item, key) => (
-    <div className="hero-slide-item" key={key}>
-      <div className="hero-slide-bg">
-        <img src={item.img} alt={item.title} />
-      </div>
-      <div className="container">
-        <div className="hero-slide-content">
-          <h2 className="title m-0 text-white">
-            {item.title} <br /> {item.title1}
-          </h2>
-          <p class="text-white">{item.text}</p>
-          <Link to="shop.html" class="btn btn-secondary btn-hover-primary">
-            Shop Now
-          </Link>
-        </div>
-      </div>
-    </div>
-  ));
-
-
   const OnSaleProduct = ListProduct?.map((item, key) => (
     <div className="product" key={key}>
       <div className="single-product-list mb-6">
@@ -276,39 +221,23 @@ const HomePage = () => {
 
   return (
     <>
-      {/* hero-slider */}
-      <section className="hero-slider">
-        <Slider {...SettingsFull}>{bannerHero}</Slider>
-      </section>
-      {/* hero-slider */}
-      {/* Featured Collection */}
-      <section className="featured-collection position-relative">
+      <section className="section-banner">
         <div className="container">
-          <div className="row mb-lg-8 mb-6">
-            <div className="col-lg col-12">
-              <div className="section-title mb-0 text-center aos-init aos-animate">
-                <h2 className="title mb-2">Featured Collection</h2>
-                <p>Add featured products to weekly lineup</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="product-carousel">
-              <div className="product-wrapper">
-                <div className="slider-container">
-               <ProductFeaturedCollection/>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Banner />
+        </div>
+      </section>
+      {/* Featured Collection */}
+      <section className="featured-collection relative">
+        <div className="container">
+          <FeaturedCategories />
         </div>
       </section>
       {/* Featured Collection */}
       {/* On-Sale Product */}
-      <section className="on-sale-product position-relative">
+      <section className="on-sale-product relative">
         <div className="container">
           <div className="row mb-lg-8 mb-6">
-            <div className="col-lg col-12">
+            <div className="col-lg w-full">
               <div className="section-title mb-0 text-center aos-init aos-animate">
                 <h2 className="title mb-2">On-Sale Product</h2>
                 <p>Check out on-sale Producs</p>
@@ -328,10 +257,10 @@ const HomePage = () => {
       </section>
       {/* On-Sale Product */}
       {/* Testimonials */}
-      <section className="testimonials position-relative">
+      <section className="testimonials relative">
         <div className="container">
           <div className="row mb-lg-8 mb-6">
-            <div className="col-lg col-12">
+            <div className="col-lg w-full">
               <div className="section-title mb-0 text-center aos-init aos-animate">
                 <h2 className="title mb-2">Testimonials</h2>
                 <p>What they say</p>
@@ -349,10 +278,10 @@ const HomePage = () => {
       </section>
       {/* Testimonials */}
       {/* brand-logo-carousel */}
-      <section className="featured-collection position-relative">
+      <section className="featured-collection relative">
         <div className="container">
           <div className="row mb-lg-8 mb-6">
-            <div className="col-lg col-12">
+            <div className="col-lg w-full">
               <div className="section-title mb-0 text-center aos-init aos-animate">
                 <h2 className="title mb-2">Featured Collection</h2>
                 <p>Add featured products to weekly lineup</p>
@@ -362,7 +291,7 @@ const HomePage = () => {
           <div className="row">
             <div className="product-carousel">
               <div className="product-wrapper">
-              <ProductFeaturedCollection/>
+                <ProductFeaturedCollection />
               </div>
             </div>
           </div>

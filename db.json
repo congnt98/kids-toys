@@ -1,10 +1,10 @@
 {
-  "product": [
+  "products": [
     {
-      "name": "Dinosaur Toys for Baby",
+      "name": "Dinosaur Toys for Baby 1",
       "price": 12.5,
       "rating": 5,
-      "old": 20,
+      "old": 0,
       "availability": 44,
       "wislist": 19,
       "image": "https://htmldemo.net/toyqo/toyqo/assets/images/products/medium-product/1.jpg",
@@ -207,18 +207,45 @@
       "old": 96,
       "availability": 2,
       "wislist": 78,
-      "image": "https://htmldemo.net/toyqo/toyqo/assets/images/products/medium-product/21.jpg",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/mo-hinh-thomas-neon-doi-mau-thomas-friend-hmc30_1.jpg?v=1716883750&width=990",
       "id": "21"
     },
     {
-      "name": "name 22",
-      "price": 34,
-      "rating": 13,
+      "name": "Mô Hình Thomas Neon Đổi Màu THOMAS FRIEND HMC30",
+      "price": 229.0,
+      "price-membership": 229.0,
+      "rating": 5,
+      "brands": "THOMAS FRIEND",
+      "sku": "HMC30-HTN50",
       "old": 21,
       "availability": 95,
       "wislist": 8,
-      "image": "https://htmldemo.net/toyqo/toyqo/assets/images/products/medium-product/22.jpg",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/mo-hinh-thomas-neon-doi-mau-thomas-friend-hmc30_1.jpg?v=1716883750&width=990",
       "id": "22"
+    }
+  ],
+  "banners": [
+    {
+      "img": "https://www.mykingdom.com.vn/cdn/shop/files/1._Hero_banner_-_1280x496_5e7e0529-591f-499c-a407-857976ed5981.jpg?v=1714129981&width=1200",
+      "title": " New Arrivals ",
+      "title1": "Amazing Craft ",
+      "text": "Latest baby product & toy collections.",
+      "sale": "20",
+      "slug": ""
+    },
+    {
+      "img": "https://www.mykingdom.com.vn/cdn/shop/files/1._Hero_banner_-_1280x496_5e7e0529-591f-499c-a407-857976ed5981.jpg?v=1714129981&width=1200",
+      "title": "Get -30% off",
+      "text": "Latest baby product & toy collections.",
+      "sale": "20",
+      "slug": ""
+    },
+    {
+      "img": "https://www.mykingdom.com.vn/cdn/shop/files/KV_1280x496_914f2561-162c-42d0-bc4e-4952711203d1.jpg?v=1717213590&width=1200",
+      "title": "Get -30% off",
+      "text": "Latest baby product & toy collections.",
+      "sale": "20",
+      "slug": ""
     }
   ]
 }
