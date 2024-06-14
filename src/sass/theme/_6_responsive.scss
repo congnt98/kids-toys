@@ -1,0 +1,15 @@
+
+@media (min-width: 768px) {
+    .card-item.full-width {
+        min-height: 130px;
+    }
+}
+
+@media (min-width:991px) {
+    .swiper-scrollbar-custom .swiper-scrollbar-drag .minion:before{
+        height: 80px;
+        width: 80px;
+        margin-top: -45px;
+        left: -20px;
+    }
+}

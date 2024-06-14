@@ -43,79 +43,74 @@ const Banner = () => {
   }
 
   return (
- 
-
-      <div className="custom-swiper">
-        <Swiper
-          onSwiper={(swiperInstance) => {
-            swiperRef.current = swiperInstance;
-          }}
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000 }}
-          className="swiper-container"
+    <div className="custom-swiper">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+        }}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
+        className="swiper-container"
+      >
+        {banners?.map((item, key) => (
+          <SwiperSlide className="hero-slide-item" key={key}>
+            <div className="hero-slide-bg">
+              <img src={item.img} alt={item.title} />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className="swiper-button-prev custom-prev" ref={prevRef}>
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          {banners?.map((item, key) => (
-            <SwiperSlide className="hero-slide-item" key={key}>
-              <div className="hero-slide-bg">
-                <img src={item.img} alt={item.title} />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="swiper-button-prev custom-prev" ref={prevRef}>
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 48 48"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20.0607 25.0607L24.4393 29.4393C25.3843 30.3843 27 29.715 27 28.3787L27 19.6213C27 18.285 25.3843 17.6157 24.4393 18.5607L20.0607 22.9393C19.4749 23.5251 19.4749 24.4749 20.0607 25.0607Z"
-              fill="#CF102D"
-            ></path>
-            <rect
-              x="1.5"
-              y="1.5"
-              width="45"
-              height="45"
-              rx="22.5"
-              stroke="#CF102D"
-              strokeWidth="3"
-            ></rect>
-          </svg>
-        </div>
-        <div className="swiper-button-next custom-next" ref={nextRef}>
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 48 48"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20.0607 25.0607L24.4393 29.4393C25.3843 30.3843 27 29.715 27 28.3787L27 19.6213C27 18.285 25.3843 17.6157 24.4393 18.5607L20.0607 22.9393C19.4749 23.5251 19.4749 24.4749 20.0607 25.0607Z"
-              fill="#CF102D"
-            ></path>
-            <rect
-              x="1.5"
-              y="1.5"
-              width="45"
-              height="45"
-              rx="22.5"
-              stroke="#CF102D"
-              strokeWidth="3"
-            ></rect>
-          </svg>
-        </div>
+          <path
+            d="M20.0607 25.0607L24.4393 29.4393C25.3843 30.3843 27 29.715 27 28.3787L27 19.6213C27 18.285 25.3843 17.6157 24.4393 18.5607L20.0607 22.9393C19.4749 23.5251 19.4749 24.4749 20.0607 25.0607Z"
+            fill="#CF102D"
+          ></path>
+          <rect
+            x="1.5"
+            y="1.5"
+            width="45"
+            height="45"
+            rx="22.5"
+            stroke="#CF102D"
+            strokeWidth="3"
+          ></rect>
+        </svg>
       </div>
+      <div className="swiper-button-next custom-next" ref={nextRef}>
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.0607 25.0607L24.4393 29.4393C25.3843 30.3843 27 29.715 27 28.3787L27 19.6213C27 18.285 25.3843 17.6157 24.4393 18.5607L20.0607 22.9393C19.4749 23.5251 19.4749 24.4749 20.0607 25.0607Z"
+            fill="#CF102D"
+          ></path>
+          <rect
+            x="1.5"
+            y="1.5"
+            width="45"
+            height="45"
+            rx="22.5"
+            stroke="#CF102D"
+            strokeWidth="3"
+          ></rect>
+        </svg>
+      </div>
+    </div>
   );
 };
 
