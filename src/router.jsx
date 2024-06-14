@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/homepage";
 import { ROUTERS } from "./utils/router";
-import { Fragment, memo } from "react";
+import { memo } from "react";
 import Product from "./pages/product/Product";
 import Notfound from "./pages/notfound";
 import DefaultLayout from "Layout/customRouterLayout/DefaultLayout";

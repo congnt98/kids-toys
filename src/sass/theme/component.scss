@@ -1,0 +1,47 @@
+.card-item.full-width {
+    min-height: 80px;
+}
+
+
+.swiper-scrollbar-custom{
+    margin: 0  auto 0;
+    max-width: 50%;
+    display: block;
+    width: 100%;
+    height: 8px;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fff;
+    .swiper-scrollbar {
+        bottom: 0;
+        width: 100%;
+        top: auto;
+        cursor: pointer;
+        height: 8px;
+        border-radius: 8px;
+        left: 0;
+        right: 0;
+    }
+
+    .swiper-scrollbar-drag {
+        height: 80px !important;
+        background-color: unset;
+        .minion::before {
+            content: "";
+            display: flex;
+            position: absolute;
+            right: 0;
+            left: -5px;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            margin-top: -23px;
+            background-image: url(../../assets//images/icon/minion.svg);
+            background-size: contain;
+            z-index: 999;
+        }
+    }
+    
+}

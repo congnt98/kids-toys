@@ -9,8 +9,10 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
-      black:"#000",
+      color:"#313131",
+      black: "#000",
       transparent: "transparent",
+      red: "#CF102D",
       white: "#ffffff",
       blue: "#1fb6ff",
       purple: "#7e5bef",
@@ -25,6 +27,8 @@ module.exports = {
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
       serif: ["Merriweather", "serif"],
+      Jakarta : ["Jakarta", "serif"],
+
     },
     extend: {
       spacing: {

@@ -1,17 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export const CardImageItem = () => {
+export const CardImageItem = (props) => {
+  const { dataCard, className } = props;
   return (
     <>
-      <div className="card-item">
+      <div className={`"card-item  ${className}`}>
         <div className="image rounded-[16px] overflow-hidden ">
-          <img
-            src="https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_mo_hinh_nhan_v_t.jpg?v=1694141939"
-            alt=""
-          />
+          <img className="w-full" src={dataCard.img} alt="" />
         </div>
-        <div className="card-info mb-6 mt-7 ">
-          <h3 className="text-3xl text-[#000]">Đồ chơi mầm non</h3>
+        <div className="card-info mb-6 mt-7 text-center ">
+          <h3 className="text-lg lg:text-3xl text-[#050505] font-bold">
+            {dataCard.Name}
+          </h3>
+          <Link
+            to={dataCard.slug}
+            className="mt-3 py-2 px-[30px] text-color text-xs lg:text-base md:border-[3px] border-solid border-2 border-red rounded-[40px] mt-3  inline-block"
+          >
+            Xem Thêm
+          </Link>
         </div>
       </div>
     </>
