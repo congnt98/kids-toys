@@ -1,0 +1,24 @@
+@import 'config/variables';
+@import 'config/mixins';
+
+@import 'base';
+
+// components
+@import 'components/carousel';
+@import 'components/filter-cat-item';
+@import 'components/product-item';
+
+
+
+// layout
+@import'layout/1_header';
+@import'layout/2_section';
+@import 'layout/footer';
+
+// pages
+@import 'pages/home';
+@import 'pages/product';
+
+
+// res
+@import 'responsive'

@@ -1,6 +1,6 @@
 import { Footer } from "Layout/Footer";
 import { Header } from "Layout/Header/Header";
-import LeftSidebar from "Layout/LeftSidebar/LeftSidebar";
+import FilterProduct from "Layout/LeftSidebar/FilterProduct";
 import React from "react";
 
 const SidebarLayout = ({ children, ...props }) => {
@@ -11,7 +11,7 @@ const SidebarLayout = ({ children, ...props }) => {
         <main>
           <div className="container">
             <div className="main-layout gap-[40px] flex justify-between mt-10 max-w-full flex-wrap md:flex-nowrap ">
-              <LeftSidebar />
+              <FilterProduct {...props} />
               <div className="main-content mb-20 w-full md:w-[calc(100%-284px)]">
                 {children}
               </div>

@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import Homepage from "./pages/homepage";
+import Homepage from "./pages/homepage/HomePage";
 import { ROUTERS } from "./utils/router";
 import { memo } from "react";
-import Product from "./pages/product/Product";
-import Notfound from "./pages/notfound";
+import Product from "./pages/product/ProductPage";
+import Notfound from "./pages/notfound/NotFoundPage";
 import DefaultLayout from "Layout/customRouterLayout/DefaultLayout";
 import SidebarLayout from "Layout/customRouterLayout/SidebarLayout";
 
@@ -19,7 +19,7 @@ const userRouter = [
     layout: SidebarLayout,
   },
   {
-    path: ROUTERS.USER.PRODUCTNEW,
+    path: `/${ROUTERS.USER.PRODUCT}/:cat`,
     component: <Product />,
     layout: SidebarLayout,
   },

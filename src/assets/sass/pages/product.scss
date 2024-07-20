@@ -1,0 +1,59 @@
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 16px;
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 24px;
+
+    .label {
+        font-size: 14px;
+        font-family: Plus Jakarta Sans;
+        margin-right: 10px;
+        font-weight: 300;
+        line-height: 20px;
+        color: #111;
+        display: inline-block;
+    }
+
+    .view {
+        .icon {
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 8px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .view-tooltip {
+            display: inline-block;
+        }
+        .react-tooltip {
+            background-color: #fff;
+            border: 1px solid #e2e2e2;
+            color: #454545;
+            font-size: 13px;
+            padding: 10px 15px;
+            line-height: 1.5384615385;
+            text-transform: initial;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+    .count {
+        .text-count {
+            display: inline-block;
+            font-weight: bold;
+        }
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+}
+.grid-two {
+    .product-item {
+        width: calc(100% / 2 - 8px);
+    }
+}

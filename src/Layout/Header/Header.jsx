@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.scss";
 import Navigation from "./Navigation/Navigation";
 
 export const Header = () => {

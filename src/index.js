@@ -1,21 +1,21 @@
 import React from "react";
-import './index.css';
-// Bootstrap CSS
-// import "bootstrap/dist/css/bootstrap.min.css";
-// Bootstrap Bundle JS
-// import "bootstrap/dist/js/bootstrap.bundle.min";
+import "./index.css";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import RouterCustom from "./router";
-import "./sass/styles.scss";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import "./assets/sass/main.scss";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <RouterCustom />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <RouterCustom />
+      </BrowserRouter>
+    </QueryClientProvider>
   </Provider>
 );
