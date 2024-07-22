@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kids-toys/static/css/main.ccf509fa.css",
-    "main.js": "/kids-toys/static/js/main.6599b81b.js",
+    "main.js": "/kids-toys/static/js/main.f6d1dc85.js",
     "static/media/minion.svg": "/kids-toys/static/media/minion.b1e4bf4c048b2e6c34c3.svg",
     "static/media/fa-solid-900.ttf": "/kids-toys/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
     "static/media/fa-brands-400.ttf": "/kids-toys/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
@@ -29,10 +29,10 @@
     "static/media/angle-right-solid.svg": "/kids-toys/static/media/angle-right-solid.f5f29eb6bcae51bf8bd0.svg",
     "static/media/angle-left-solid.svg": "/kids-toys/static/media/angle-left-solid.5451f73e579fa49a86e4.svg",
     "main.ccf509fa.css.map": "/kids-toys/static/css/main.ccf509fa.css.map",
-    "main.6599b81b.js.map": "/kids-toys/static/js/main.6599b81b.js.map"
+    "main.f6d1dc85.js.map": "/kids-toys/static/js/main.f6d1dc85.js.map"
   },
   "entrypoints": [
     "static/css/main.ccf509fa.css",
-    "static/js/main.6599b81b.js"
+    "static/js/main.f6d1dc85.js"
   ]
 }
