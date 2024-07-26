@@ -10,8 +10,8 @@ export const Footer = () => {
     <footer className="section footer-section">
     <div className="footer-top bg-primary section-padding">
       <div className="container">
-        <div className="row mb-n8">
-          <div className="w-full col-sm-6 col-lg-3 mb-8">
+        <div className=" flex flex-wrap mb-n8">
+          <div className="lg:flex-[0_0_25%] sm:flex-[0_0_50%] flex-auto">
             <div className="single-footer-widget">
               <h1 className="widget-title">About Us</h1>
               <p className="desc-content">
@@ -37,7 +37,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="w-full col-sm-6 col-lg-3 mb-8">
+          <div className="lg:flex-[0_0_25%] sm:flex-[0_0_50%] flex-auto">
             <div className="single-footer-widget">
               <h2 className="widget-title">Contact Us</h2>
               <ul className="contact-links">
@@ -56,7 +56,7 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="w-full col-sm-6 col-lg-3 mb-8">
+          <div className="lg:flex-[0_0_25%] sm:flex-[0_0_50%] flex-auto">
             <div className="single-footer-widget aos-init aos-animate">
               <h2 className="widget-title">Information</h2>
               <ul className="widget-list">
@@ -78,7 +78,7 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="w-full col-sm-6 col-lg-3 mb-8">
+          <div className="lg:flex-[0_0_25%] sm:flex-[0_0_50%] flex-auto">
             <div className="single-footer-widget">
               <h2 className="widget-title">Signup for newsletter</h2>
               <div className="widget-body">

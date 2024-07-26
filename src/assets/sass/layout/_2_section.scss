@@ -16,3 +16,20 @@
     }
 }
 
+.featured-collection {
+    .card-items {
+        justify-content: space-between;
+    }
+    .card-item {
+        width: calc(50% - 12px);
+        &.w-full {
+            width: 100%;
+            img {
+                aspect-ratio: 32/9;
+            }
+        }
+    }
+    img {
+        aspect-ratio: 708/325;
+    }
+}

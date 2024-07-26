@@ -1,25 +1,38 @@
 import React, { useState } from "react";
+import { FaCaretDown, FaCaretUp } from "react-icons/fa6";
 
-const Dropdown = ({ name }) => {
-  const [status, setStatus] = useState(false);
-  const handleDropdown = (value) => {};
+const Dropdown = ({ name, label, value, options, onChange }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleOpen = (status) => {
-    setStatus(!status);
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
   };
+
+  const handleDropdown = (option) => {
+    onChange(option);
+    setIsOpen(false);
+  };
+
   return (
-    <div className={`dropdown dropdown-${name}`}>
-      <button
-        onClick={() => {
-            setStatus(!status);
-        }}
-      >
-        a-z
+    <div className={`dropdown dropdown-container dropdown-${name}`}>
+      {label && <label htmlFor={`dropdown=${name}`}>{label}</label>}
+      <button onClick={handleToggle}>
+        <span>{options.find((option) => option.value === value)?.label}</span>
+        {isOpen ? <FaCaretUp /> : <FaCaretDown />}
       </button>
-      {status && (
-        <ul className="dropdown-menu">
-          <li onClick={() => handleDropdown("asc")}>A - Z</li>
-          <li onClick={() => handleDropdown("desc")}>Z - A</li>
+      {isOpen && (
+        <ul className="dropdown-list">
+          {options.map((option) => (
+            <li
+              key={option.value}
+              className="dropdown-item"
+              onClick={() => {
+                handleDropdown(option.value);
+              }}
+            >
+              {option.label}
+            </li>
+          ))}
         </ul>
       )}
     </div>

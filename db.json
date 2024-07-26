@@ -1,709 +1,7 @@
 {
-  "products": [
-    {
-      "name": "Siêu Anh Hùng",
-      "category": "sieu-anh-hung",
-      "vendor": "vendor 1",
-      "sku": "sku 1",
-      "price": 39,
-      "sale": 16,
-      "wislist": 36,
-      "wislist_status": 42,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=500",
-      "sex": "sex 1",
-      "detail": "detail 1",
-      "id": "1"
-    },
-    {
-      "name": "name 2",
-      "category": 2,
-      "vendor": "vendor 2",
-      "sku": "sku 2",
-      "price": 58,
-      "sale": 12,
-      "wislist": 11,
-      "wislist_status": 72,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=500",
-      "sex": "sex 2",
-      "detail": "detail 2",
-      "id": "2"
-    },
-    {
-      "name": "name 3",
-      "category": 3,
-      "vendor": "vendor 3",
-      "sku": "sku 3",
-      "price": 73,
-      "sale": 57,
-      "wislist": 28,
-      "wislist_status": 30,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=500",
-      "sex": "sex 3",
-      "detail": "detail 3",
-      "id": "3"
-    },
-    {
-      "name": "name 4",
-      "category": 2,
-      "vendor": "vendor 4",
-      "sku": "sku 4",
-      "price": 42,
-      "sale": 29,
-      "wislist": 17,
-      "wislist_status": 44,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=500",
-      "sex": "sex 4",
-      "detail": "detail 4",
-      "id": "4"
-    },
-    {
-      "name": "name 5",
-      "category": 3,
-      "vendor": "vendor 5",
-      "sku": "sku 5",
-      "price": 81,
-      "sale": 11,
-      "wislist": 32,
-      "wislist_status": 90,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=500",
-      "sex": "sex 5",
-      "detail": "detail 5",
-      "id": "5"
-    },
-    {
-      "name": "name 6",
-      "category": 4,
-      "vendor": "vendor 6",
-      "sku": "sku 6",
-      "price": 33,
-      "sale": 56,
-      "wislist": 32,
-      "wislist_status": 8,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=500",
-      "sex": "sex 6",
-      "detail": "detail 6",
-      "id": "6"
-    },
-    {
-      "name": "name 7",
-      "category": 5,
-      "vendor": "vendor 7",
-      "sku": "sku 7",
-      "price": 90,
-      "sale": 20,
-      "wislist": 26,
-      "wislist_status": 55,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=500",
-      "sex": "sex 7",
-      "detail": "detail 7",
-      "id": "7"
-    },
-    {
-      "name": "name 8",
-      "category": 2,
-      "vendor": "vendor 8",
-      "sku": "sku 8",
-      "price": 2,
-      "sale": 72,
-      "wislist": 65,
-      "wislist_status": 46,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=500",
-      "sex": "sex 8",
-      "detail": "detail 8",
-      "id": "8"
-    },
-    {
-      "name": "name 9",
-      "category": 1,
-      "vendor": "vendor 9",
-      "sku": "sku 9",
-      "price": 82,
-      "sale": 39,
-      "wislist": 18,
-      "wislist_status": 59,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=500",
-      "sex": "sex 9",
-      "detail": "detail 9",
-      "id": "9"
-    },
-    {
-      "name": "name 10",
-      "category": 3,
-      "vendor": "vendor 10",
-      "sku": "sku 10",
-      "price": 80,
-      "sale": 56,
-      "wislist": 59,
-      "wislist_status": 30,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=5000",
-      "sex": "sex 10",
-      "detail": "detail 10",
-      "id": "10"
-    },
-    {
-      "name": "name 11",
-      "category": 4,
-      "vendor": "vendor 11",
-      "sku": "sku 11",
-      "price": 17,
-      "sale": 81,
-      "wislist": 50,
-      "wislist_status": 91,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=5001",
-      "sex": "sex 11",
-      "detail": "detail 11",
-      "id": "11"
-    },
-    {
-      "name": "name 12",
-      "category": 5,
-      "vendor": "vendor 12",
-      "sku": "sku 12",
-      "price": 69,
-      "sale": 74,
-      "wislist": 60,
-      "wislist_status": 27,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=5002",
-      "sex": "sex 12",
-      "detail": "detail 12",
-      "id": "12"
-    },
-    {
-      "name": "name 13",
-      "category": 5,
-      "vendor": "vendor 13",
-      "sku": "sku 13",
-      "price": 42,
-      "sale": 97,
-      "wislist": 83,
-      "wislist_status": 96,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=5003",
-      "sex": "sex 13",
-      "detail": "detail 13",
-      "id": "13"
-    },
-    {
-      "name": "name 14",
-      "category": 6,
-      "vendor": "vendor 14",
-      "sku": "sku 14",
-      "price": 97,
-      "sale": 28,
-      "wislist": 32,
-      "wislist_status": 3,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=5004",
-      "sex": "sex 14",
-      "detail": "detail 14",
-      "id": "14"
-    },
-    {
-      "name": "name 15",
-      "category": 26,
-      "vendor": "vendor 15",
-      "sku": "sku 15",
-      "price": 86,
-      "sale": 33,
-      "wislist": 90,
-      "wislist_status": 65,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=5005",
-      "sex": "sex 15",
-      "detail": "detail 15",
-      "id": "15"
-    },
-    {
-      "name": "name 16",
-      "category": 64,
-      "vendor": "vendor 16",
-      "sku": "sku 16",
-      "price": 96,
-      "sale": 51,
-      "wislist": 24,
-      "wislist_status": 17,
-      "image": "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/mykingdom-6061804_1.jpg?v=1685041351&width=5006",
-      "sex": "sex 16",
-      "detail": "detail 16",
-      "id": "16"
-    },
-    {
-      "name": "name 17",
-      "category": 82,
-      "vendor": "vendor 17",
-      "sku": "sku 17",
-      "price": 47,
-      "sale": 93,
-      "wislist": 53,
-      "wislist_status": 79,
-      "image": "image 17",
-      "sex": "sex 17",
-      "detail": "detail 17",
-      "id": "17"
-    },
-    {
-      "name": "name 18",
-      "category": 77,
-      "vendor": "vendor 18",
-      "sku": "sku 18",
-      "price": 9,
-      "sale": 66,
-      "wislist": 22,
-      "wislist_status": 54,
-      "image": "image 18",
-      "sex": "sex 18",
-      "detail": "detail 18",
-      "id": "18"
-    },
-    {
-      "name": "name 19",
-      "category": 38,
-      "vendor": "vendor 19",
-      "sku": "sku 19",
-      "price": 88,
-      "sale": 49,
-      "wislist": 19,
-      "wislist_status": 87,
-      "image": "image 19",
-      "sex": "sex 19",
-      "detail": "detail 19",
-      "id": "19"
-    },
-    {
-      "name": "name 20",
-      "category": 69,
-      "vendor": "vendor 20",
-      "sku": "sku 20",
-      "price": 62,
-      "sale": 97,
-      "wislist": 76,
-      "wislist_status": 38,
-      "image": "image 20",
-      "sex": "sex 20",
-      "detail": "detail 20",
-      "id": "20"
-    },
-    {
-      "name": "name 21",
-      "category": 21,
-      "vendor": "vendor 21",
-      "sku": "sku 21",
-      "price": 53,
-      "sale": 31,
-      "wislist": 12,
-      "wislist_status": 15,
-      "image": "image 21",
-      "sex": "sex 21",
-      "detail": "detail 21",
-      "id": "21"
-    },
-    {
-      "name": "name 22",
-      "category": 79,
-      "vendor": "vendor 22",
-      "sku": "sku 22",
-      "price": 55,
-      "sale": 69,
-      "wislist": 17,
-      "wislist_status": 95,
-      "image": "image 22",
-      "sex": "sex 22",
-      "detail": "detail 22",
-      "id": "22"
-    },
-    {
-      "name": "name 23",
-      "category": 85,
-      "vendor": "vendor 23",
-      "sku": "sku 23",
-      "price": 29,
-      "sale": 13,
-      "wislist": 68,
-      "wislist_status": 51,
-      "image": "image 23",
-      "sex": "sex 23",
-      "detail": "detail 23",
-      "id": "23"
-    },
-    {
-      "name": "name 24",
-      "category": 38,
-      "vendor": "vendor 24",
-      "sku": "sku 24",
-      "price": 39,
-      "sale": 65,
-      "wislist": 67,
-      "wislist_status": 87,
-      "image": "image 24",
-      "sex": "sex 24",
-      "detail": "detail 24",
-      "id": "24"
-    },
-    {
-      "name": "name 25",
-      "category": 50,
-      "vendor": "vendor 25",
-      "sku": "sku 25",
-      "price": 28,
-      "sale": 77,
-      "wislist": 99,
-      "wislist_status": 89,
-      "image": "image 25",
-      "sex": "sex 25",
-      "detail": "detail 25",
-      "id": "25"
-    },
-    {
-      "name": "name 26",
-      "category": 9,
-      "vendor": "vendor 26",
-      "sku": "sku 26",
-      "price": 99,
-      "sale": 10,
-      "wislist": 33,
-      "wislist_status": 53,
-      "image": "image 26",
-      "sex": "sex 26",
-      "detail": "detail 26",
-      "id": "26"
-    },
-    {
-      "name": "name 27",
-      "category": 10,
-      "vendor": "vendor 27",
-      "sku": "sku 27",
-      "price": 54,
-      "sale": 73,
-      "wislist": 8,
-      "wislist_status": 25,
-      "image": "image 27",
-      "sex": "sex 27",
-      "detail": "detail 27",
-      "id": "27"
-    },
-    {
-      "name": "name 28",
-      "category": 13,
-      "vendor": "vendor 28",
-      "sku": "sku 28",
-      "price": 37,
-      "sale": 91,
-      "wislist": 70,
-      "wislist_status": 41,
-      "image": "image 28",
-      "sex": "sex 28",
-      "detail": "detail 28",
-      "id": "28"
-    },
-    {
-      "name": "name 29",
-      "category": 81,
-      "vendor": "vendor 29",
-      "sku": "sku 29",
-      "price": 82,
-      "sale": 17,
-      "wislist": 62,
-      "wislist_status": 70,
-      "image": "image 29",
-      "sex": "sex 29",
-      "detail": "detail 29",
-      "id": "29"
-    },
-    {
-      "name": "name 30",
-      "category": 35,
-      "vendor": "vendor 30",
-      "sku": "sku 30",
-      "price": 73,
-      "sale": 79,
-      "wislist": 89,
-      "wislist_status": 20,
-      "image": "image 30",
-      "sex": "sex 30",
-      "detail": "detail 30",
-      "id": "30"
-    },
-    {
-      "name": "name 31",
-      "category": 33,
-      "vendor": "vendor 31",
-      "sku": "sku 31",
-      "price": 82,
-      "sale": 64,
-      "wislist": 8,
-      "wislist_status": 97,
-      "image": "image 31",
-      "sex": "sex 31",
-      "detail": "detail 31",
-      "id": "31"
-    },
-    {
-      "name": "name 32",
-      "category": 95,
-      "vendor": "vendor 32",
-      "sku": "sku 32",
-      "price": 66,
-      "sale": 19,
-      "wislist": 0,
-      "wislist_status": 47,
-      "image": "image 32",
-      "sex": "sex 32",
-      "detail": "detail 32",
-      "id": "32"
-    },
-    {
-      "name": "name 33",
-      "category": 99,
-      "vendor": "vendor 33",
-      "sku": "sku 33",
-      "price": 4,
-      "sale": 94,
-      "wislist": 34,
-      "wislist_status": 38,
-      "image": "image 33",
-      "sex": "sex 33",
-      "detail": "detail 33",
-      "id": "33"
-    },
-    {
-      "name": "name 34",
-      "category": 89,
-      "vendor": "vendor 34",
-      "sku": "sku 34",
-      "price": 71,
-      "sale": 33,
-      "wislist": 41,
-      "wislist_status": 61,
-      "image": "image 34",
-      "sex": "sex 34",
-      "detail": "detail 34",
-      "id": "34"
-    },
-    {
-      "name": "name 35",
-      "category": 36,
-      "vendor": "vendor 35",
-      "sku": "sku 35",
-      "price": 90,
-      "sale": 61,
-      "wislist": 47,
-      "wislist_status": 90,
-      "image": "image 35",
-      "sex": "sex 35",
-      "detail": "detail 35",
-      "id": "35"
-    },
-    {
-      "name": "name 36",
-      "category": 46,
-      "vendor": "vendor 36",
-      "sku": "sku 36",
-      "price": 62,
-      "sale": 75,
-      "wislist": 37,
-      "wislist_status": 82,
-      "image": "image 36",
-      "sex": "sex 36",
-      "detail": "detail 36",
-      "id": "36"
-    },
-    {
-      "name": "name 37",
-      "category": 93,
-      "vendor": "vendor 37",
-      "sku": "sku 37",
-      "price": 79,
-      "sale": 37,
-      "wislist": 9,
-      "wislist_status": 98,
-      "image": "image 37",
-      "sex": "sex 37",
-      "detail": "detail 37",
-      "id": "37"
-    },
-    {
-      "name": "name 38",
-      "category": 49,
-      "vendor": "vendor 38",
-      "sku": "sku 38",
-      "price": 88,
-      "sale": 85,
-      "wislist": 73,
-      "wislist_status": 6,
-      "image": "image 38",
-      "sex": "sex 38",
-      "detail": "detail 38",
-      "id": "38"
-    },
-    {
-      "name": "name 39",
-      "category": 78,
-      "vendor": "vendor 39",
-      "sku": "sku 39",
-      "price": 33,
-      "sale": 86,
-      "wislist": 35,
-      "wislist_status": 85,
-      "image": "image 39",
-      "sex": "sex 39",
-      "detail": "detail 39",
-      "id": "39"
-    },
-    {
-      "name": "name 40",
-      "category": 40,
-      "vendor": "vendor 40",
-      "sku": "sku 40",
-      "price": 54,
-      "sale": 33,
-      "wislist": 50,
-      "wislist_status": 75,
-      "image": "image 40",
-      "sex": "sex 40",
-      "detail": "detail 40",
-      "id": "40"
-    },
-    {
-      "name": "name 41",
-      "category": 64,
-      "vendor": "vendor 41",
-      "sku": "sku 41",
-      "price": 98,
-      "sale": 82,
-      "wislist": 57,
-      "wislist_status": 76,
-      "image": "image 41",
-      "sex": "sex 41",
-      "detail": "detail 41",
-      "id": "41"
-    },
-    {
-      "name": "name 42",
-      "category": 70,
-      "vendor": "vendor 42",
-      "sku": "sku 42",
-      "price": 49,
-      "sale": 6,
-      "wislist": 55,
-      "wislist_status": 45,
-      "image": "image 42",
-      "sex": "sex 42",
-      "detail": "detail 42",
-      "id": "42"
-    },
-    {
-      "name": "name 43",
-      "category": 58,
-      "vendor": "vendor 43",
-      "sku": "sku 43",
-      "price": 9,
-      "sale": 95,
-      "wislist": 27,
-      "wislist_status": 75,
-      "image": "image 43",
-      "sex": "sex 43",
-      "detail": "detail 43",
-      "id": "43"
-    },
-    {
-      "name": "name 44",
-      "category": 97,
-      "vendor": "vendor 44",
-      "sku": "sku 44",
-      "price": 52,
-      "sale": 2,
-      "wislist": 24,
-      "wislist_status": 19,
-      "image": "image 44",
-      "sex": "sex 44",
-      "detail": "detail 44",
-      "id": "44"
-    },
-    {
-      "name": "name 45",
-      "category": 57,
-      "vendor": "vendor 45",
-      "sku": "sku 45",
-      "price": 4,
-      "sale": 35,
-      "wislist": 43,
-      "wislist_status": 4,
-      "image": "image 45",
-      "sex": "sex 45",
-      "detail": "detail 45",
-      "id": "45"
-    },
-    {
-      "name": "name 46",
-      "category": 11,
-      "vendor": "vendor 46",
-      "sku": "sku 46",
-      "price": 89,
-      "sale": 5,
-      "wislist": 73,
-      "wislist_status": 37,
-      "image": "image 46",
-      "sex": "sex 46",
-      "detail": "detail 46",
-      "id": "46"
-    },
-    {
-      "name": "name 47",
-      "category": 66,
-      "vendor": "vendor 47",
-      "sku": "sku 47",
-      "price": 45,
-      "sale": 71,
-      "wislist": 88,
-      "wislist_status": 26,
-      "image": "image 47",
-      "sex": "sex 47",
-      "detail": "detail 47",
-      "id": "47"
-    },
-    {
-      "name": "name 48",
-      "category": 38,
-      "vendor": "vendor 48",
-      "sku": "sku 48",
-      "price": 1,
-      "sale": 62,
-      "wislist": 33,
-      "wislist_status": 78,
-      "image": "image 48",
-      "sex": "sex 48",
-      "detail": "detail 48",
-      "id": "48"
-    },
-    {
-      "name": "name 49",
-      "category": 28,
-      "vendor": "vendor 49",
-      "sku": "sku 49",
-      "price": 10,
-      "sale": 53,
-      "wislist": 26,
-      "wislist_status": 47,
-      "image": "image 49",
-      "sex": "sex 49",
-      "detail": "detail 49",
-      "id": "49"
-    },
-    {
-      "name": "name 50",
-      "category": 62,
-      "vendor": "vendor 50",
-      "sku": "sku 50",
-      "price": 17,
-      "sale": 67,
-      "wislist": 98,
-      "wislist_status": 50,
-      "image": "image 50",
-      "sex": "sex 50",
-      "detail": "detail 50",
-      "id": "50"
-    }
-  ],
   "banners": [
     {
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/1._Hero_banner_-_1280x496_5e7e0529-591f-499c-a407-857976ed5981.jpg?v=1714129981&width=1200",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/1._Hero_banner_-_1280x496_5e7e0529-591f-499c-a407-857976ed5981.jpg?v=1714129981&width=1200",
       "title": " New Arrivals ",
       "title1": "Amazing Craft ",
       "text": "Latest baby product & toy collections.",
@@ -711,91 +9,1069 @@
       "slug": ""
     },
     {
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/1._Hero_banner_-_1280x496_5e7e0529-591f-499c-a407-857976ed5981.jpg?v=1714129981&width=1200",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/1._Hero_banner_-_1280x496_5e7e0529-591f-499c-a407-857976ed5981.jpg?v=1714129981&width=1200",
       "title": "Get -30% off",
       "text": "Latest baby product & toy collections.",
       "sale": "20",
       "slug": ""
     },
     {
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/KV_1280x496_914f2561-162c-42d0-bc4e-4952711203d1.jpg?v=1717213590&width=1200",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/KV_1280x496_914f2561-162c-42d0-bc4e-4952711203d1.jpg?v=1717213590&width=1200",
       "title": "Get -30% off",
       "text": "Latest baby product & toy collections.",
       "sale": "20",
       "slug": ""
     }
   ],
-  "category": [
+  "products": [
+    {
+      "name": "Siêu Anh Hùng X",
+      "category": "sieu-anh-hung",
+      "vendor": "vendor 1",
+      "brand": "ROBOCAR POLI",
+      "sku": "sku 4",
+      "price": 49,
+      "sale": 60,
+      "wislist": 15,
+      "wislist_status": 55,
+      "image": "https://s.alicdn.com/@sc04/kf/Had96013e5eb84a1b85690c458b62847f6.jpg_720x720q50.jpg",
+      "sex": "Unisex",
+      "detail": "Mô tả sản phẩm 1",
+      "id": "4",
+      "date": "2024-01-03"
+    },
+    {
+      "name": "Robot Biến Hình Xe Cảnh Sát B",
+      "category": "sieu-robot",
+      "vendor": "sieu-robot",
+      "brand": "ROBOCAR POLI",
+      "sku": "SKU ZR917",
+      "price": 219.0,
+      "sale": 65,
+      "wislist": 22,
+      "wislist_status": 85,
+      "image": "https://www.mykingdom.com.vn/cdn/shop/products/zr916.jpg?v=1695201142&width=1445",
+      "sex": "Unisex",
+      "age": "4 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 2",
+      "id": "5",
+      "date": "2024-01-04"
+    },
+    {
+      "name": "Siêu Robot Mãnh Sư Kim Ngưu V2",
+      "category": "sieu-robot",
+      "vendor": "sieu-robot",
+      "brand": "MINIFORCE",
+      "sku": "SKU ZR917",
+      "price": 810.0,
+      "sale": 70,
+      "wislist": 30,
+      "wislist_status": 90,
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/94a9300f180738fc8f465d3a60401f7d.jpg?v=1718001791&width=1100",
+      "sex": "Boy",
+      "age": "5 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 3",
+      "id": "6",
+      "date": "2024-01-05"
+    },
+    {
+      "name": "Kẹo Đồ Chơi Vui Nhộn",
+      "category": "keo-do-choi",
+      "vendor": "vendor 2",
+      "brand": "SweetCandy",
+      "sku": "SKU KE01",
+      "price": 10,
+      "sale": 0,
+      "wislist": 8,
+      "wislist_status": 20,
+      "image": "https://s.alicdn.com/@sc04/kf/Ha6f83d9d11ac41e5998e936d0b07fab7G.jpg_300x300.jpg",
+      "sex": "Unisex",
+      "detail": "Mô tả sản phẩm 4",
+      "id": "7",
+      "date": "2024-01-06"
+    },
+    {
+      "name": "Đồ Chơi Lắp Ghép Lego",
+      "category": "do-choi-lap-ghep",
+      "vendor": "vendor 3",
+      "brand": "Lego",
+      "sku": "SKU LG01",
+      "price": 59,
+      "sale": 10,
+      "wislist": 18,
+      "wislist_status": 35,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScItHUIE9XPBmg7QVEEpmCdSj7he1DaJ1ZM5W-Sp1E4MnxA5uUrjxHdJ9TAXZAmK8JFVA&usqp=CAU",
+      "sex": "Unisex",
+      "age": "6 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 5",
+      "id": "8",
+      "date": "2024-01-07"
+    },
+    {
+      "name": "Đồ Chơi Sáng Tạo Học Tập",
+      "category": "do-choi-sang-tao",
+      "vendor": "vendor 4",
+      "brand": "CreativeToys",
+      "sku": "SKU CT01",
+      "price": 29,
+      "sale": 5,
+      "wislist": 14,
+      "wislist_status": 40,
+      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSK5FEwIzBkTdSVf9vPo6LqmpHIEB-JwFRZ3zdRsAE1HUN-7yJcM6E0btjKDKHW62M-WujRq3zvS0xsvMxd_ExQ_qluuANFIVKIp4yt2L8xfx6UAt6OOAQD5UkvRj7ptM8MR5wimBY&usqp=CAc",
+      "sex": "Unisex",
+      "age": "5 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 6",
+      "id": "9",
+      "date": "2024-01-08"
+    },
+    {
+      "name": "Đồ Thời Trang Bé Gái",
+      "category": "do-thoi-trang",
+      "vendor": "vendor 5",
+      "brand": "FashionKids",
+      "sku": "SKU FT01",
+      "price": 49,
+      "sale": 15,
+      "wislist": 23,
+      "wislist_status": 60,
+      "image": "",
+      "sex": "Girl",
+      "age": "4 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 7",
+      "id": "10",
+      "date": "2024-01-09"
+    },
+    {
+      "name": "Thế Giới Động Vật Hoang Dã",
+      "category": "the-gioi-dong-vat",
+      "vendor": "vendor 6",
+      "brand": "WildWorld",
+      "sku": "SKU WD01",
+      "price": 39,
+      "sale": 12,
+      "wislist": 12,
+      "wislist_status": 28,
+      "image": "",
+      "sex": "Unisex",
+      "age": "6 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 8",
+      "id": "11",
+      "date": "2024-01-10"
+    },
+    {
+      "name": "Đồ Chơi Mô Phỏng Xe Cảnh Sát",
+      "category": "do-choi-mo-phong",
+      "vendor": "vendor 7",
+      "brand": "PoliceToys",
+      "sku": "SKU PP01",
+      "price": 55,
+      "sale": 20,
+      "wislist": 17,
+      "wislist_status": 45,
+      "image": "",
+      "sex": "Unisex",
+      "age": "4 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 9",
+      "id": "12",
+      "date": "2024-01-11"
+    },
+    {
+      "name": "Thú Bông Mềm Mại",
+      "category": "thu-bong",
+      "vendor": "vendor 8",
+      "brand": "SoftToys",
+      "sku": "SKU TB01",
+      "price": 22,
+      "sale": 5,
+      "wislist": 30,
+      "wislist_status": 80,
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQFoySR5t7KXyrWou8cMaUvcdu_aOev6m_llDhsBoGLRk55ry1_G3VCO_DRHwtenB9j9K_clg7biEt2OdaQGyoOq-TZzCIoc2XXTRaFWqrGJDUFlIqFPgjNQ0LauFa79J7mKQ-IFHQ&usqp=CAc",
+      "sex": "Unisex",
+      "detail": "Mô tả sản phẩm 10",
+      "id": "13",
+      "date": "2024-01-12"
+    },
+    {
+      "name": "Robot Điều Khiển Từ Xa",
+      "category": "robot",
+      "vendor": "vendor 9",
+      "brand": "RobotX",
+      "sku": "SKU RX01",
+      "price": 120,
+      "sale": 25,
+      "wislist": 20,
+      "wislist_status": 50,
+      "image": "",
+      "sex": "Unisex",
+      "age": "7 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 11",
+      "id": "14",
+      "date": "2024-01-13"
+    },
+    {
+      "name": "Đồ Chơi Lắp Ghép Robot",
+      "category": "do-choi-lap-ghep",
+      "vendor": "vendor 10",
+      "brand": "BuildRobot",
+      "sku": "SKU BR01",
+      "price": 69,
+      "sale": 10,
+      "wislist": 25,
+      "wislist_status": 70,
+      "image": "",
+      "sex": "Unisex",
+      "age": "6 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 12",
+      "id": "15",
+      "date": "2024-01-14"
+    },
+    {
+      "name": "Kẹo Đồ Chơi Ngọt Ngào",
+      "category": "keo-do-choi",
+      "vendor": "vendor 11",
+      "brand": "CandyFun",
+      "sku": "SKU KE02",
+      "price": 12,
+      "sale": 2,
+      "wislist": 10,
+      "wislist_status": 25,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUMJDpZRumWIrtJVPUJmLYzMG6jP_CgvEWhw&s",
+      "sex": "Unisex",
+      "detail": "Mô tả sản phẩm 13",
+      "id": "16",
+      "date": "2024-01-15"
+    },
+    {
+      "name": "Đồ Chơi Sáng Tạo Đa Năng",
+      "category": "do-choi-sang-tao",
+      "vendor": "vendor 12",
+      "brand": "InnovativeToys",
+      "sku": "SKU CT02",
+      "price": 32,
+      "sale": 7,
+      "wislist": 19,
+      "wislist_status": 42,
+      "image": "",
+      "sex": "Unisex",
+      "age": "5 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 14",
+      "id": "17",
+      "date": "2024-01-16"
+    },
+    {
+      "name": "Đồ Thời Trang Bé Trai",
+      "category": "do-thoi-trang",
+      "vendor": "vendor 13",
+      "brand": "FashionForKids",
+      "sku": "SKU FT02",
+      "price": 55,
+      "sale": 18,
+      "wislist": 25,
+      "wislist_status": 65,
+      "image": "",
+      "sex": "Boy",
+      "age": "4 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 15",
+      "id": "18",
+      "date": "2024-01-17"
+    },
+    {
+      "name": "Thế Giới Động Vật Đại Dương",
+      "category": "the-gioi-dong-vat",
+      "vendor": "vendor 14",
+      "brand": "OceanWorld",
+      "sku": "SKU OW01",
+      "price": 45,
+      "sale": 15,
+      "wislist": 14,
+      "wislist_status": 38,
+      "image": "https://example.com/image16.jpg",
+      "sex": "Unisex",
+      "age": "6 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 16",
+      "id": "19",
+      "date": "2024-01-18"
+    },
+    {
+      "name": "Đồ Chơi Mô Phỏng Xe Lửa",
+      "category": "do-choi-mo-phong",
+      "vendor": "vendor 15",
+      "brand": "TrainToys",
+      "sku": "SKU TT01",
+      "price": 65,
+      "sale": 22,
+      "wislist": 20,
+      "wislist_status": 55,
+      "image": "https://example.com/image17.jpg",
+      "sex": "Unisex",
+      "age": "5 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 17",
+      "id": "20",
+      "date": "2024-01-19"
+    },
+    {
+      "name": "Thú Bông Con Gấu Bông",
+      "category": "thu-bong",
+      "vendor": "vendor 16",
+      "brand": "PlushFriends",
+      "sku": "SKU PB01",
+      "price": 28,
+      "sale": 10,
+      "wislist": 35,
+      "wislist_status": 85,
+      "image": "https://example.com/image18.jpg",
+      "sex": "Unisex",
+      "detail": "Mô tả sản phẩm 18",
+      "id": "21",
+      "date": "2024-01-20"
+    },
+    {
+      "name": "Robot Tự Động Học Tập",
+      "category": "robot",
+      "vendor": "vendor 17",
+      "brand": "EduRobot",
+      "sku": "SKU ER01",
+      "price": 150,
+      "sale": 30,
+      "wislist": 25,
+      "wislist_status": 60,
+      "image": "https://example.com/image19.jpg",
+      "sex": "Unisex",
+      "age": "8 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 19",
+      "id": "22",
+      "date": "2024-01-21"
+    },
+    {
+      "name": "Lego Xây Dựng Thành Phố",
+      "category": "do-choi-lap-ghep",
+      "vendor": "vendor 18",
+      "brand": "CityLego",
+      "sku": "SKU CL01",
+      "price": 75,
+      "sale": 15,
+      "wislist": 28,
+      "wislist_status": 72,
+      "image": "https://example.com/image20.jpg",
+      "sex": "Unisex",
+      "age": "7 tuổi trở lên",
+      "detail": "Mô tả sản phẩm 20",
+      "id": "23",
+      "date": "2024-01-22"
+    }
+  ],
+  "menu": [
     {
       "id": 1,
-      "name": "Siêu Anh Hùng",
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
-      "children": [
+      "name": "Hàng mới",
+      "path": "/product/new",
+      "image": "/images/menu-new-arrivals.jpg",
+      "description": "Khám phá các sản phẩm mới nhất trong cửa hàng."
+    },
+    {
+      "id": 2,
+      "name": "Flash Sales",
+      "path": "/product/sale",
+      "image": "/images/menu-flash-sales.jpg",
+      "description": "Các chương trình khuyến mãi với giá ưu đãi trong thời gian ngắn."
+    },
+    {
+      "id": 3,
+      "name": "Sản phẩm",
+      "path": "/product",
+      "image": "/images/menu-products.jpg",
+      "description": "Danh sách các sản phẩm đang có sẵn trong cửa hàng.",
+      "category": [
+        {
+          "id": 1,
+          "name": "Đồ chơi giáo dục",
+          "path": "/product/education",
+          "image": "",
+          "description": "Các loại đồ chơi giúp trẻ em phát triển kỹ năng và trí tuệ.",
+          "subcategory": [
+            {
+              "id": 1,
+              "name": "Sách giáo dục",
+              "path": "/product/books",
+              "description": "Sách và tài liệu giáo dục cho trẻ em."
+            },
+            {
+              "id": 2,
+              "name": "Đồ chơi sáng tạo",
+              "path": "/product/creative",
+              "description": "Đồ chơi khuyến khích sự sáng tạo của trẻ em."
+            },
+            {
+              "id": 3,
+              "name": "Đồ chơi toán học",
+              "path": "/product/math",
+              "description": "Đồ chơi phát triển kỹ năng toán học."
+            },
+            {
+              "id": 4,
+              "name": "Đồ chơi ngôn ngữ",
+              "path": "/product/language",
+              "description": "Đồ chơi hỗ trợ phát triển kỹ năng ngôn ngữ."
+            },
+            {
+              "id": 5,
+              "name": "Đồ chơi khoa học",
+              "path": "/product/science",
+              "description": "Bộ dụng cụ thí nghiệm và đồ chơi khoa học."
+            }
+          ]
+        },
         {
           "id": 2,
-          "name": "Siêu Anh Hùng"
+          "name": "Đồ chơi ngoài trời",
+          "path": "/product/outdoor",
+          "image": "",
+          "description": "Đồ chơi cho các hoạt động ngoài trời.",
+          "subcategory": [
+            {
+              "id": 1,
+              "name": "Bóng đá",
+              "path": "/product/football",
+              "description": "Bóng đá và các phụ kiện liên quan."
+            },
+            {
+              "id": 2,
+              "name": "Xe đạp",
+              "path": "/product/bikes",
+              "description": "Xe đạp và phụ kiện cho trẻ em."
+            },
+            {
+              "id": 3,
+              "name": "Cầu trượt",
+              "path": "/product/slides",
+              "description": "Cầu trượt và bộ chơi ngoài trời."
+            },
+            {
+              "id": 4,
+              "name": "Bể bơi",
+              "path": "/product/pools",
+              "description": "Bể bơi và đồ chơi dưới nước."
+            },
+            {
+              "id": 5,
+              "name": "Đu quay",
+              "path": "/product/swings",
+              "description": "Đu quay và xích đu cho trẻ em."
+            }
+          ]
         },
         {
           "id": 3,
-          "name": "Siêu robot"
+          "name": "Đồ chơi mô hình",
+          "path": "/product/model",
+          "image": "",
+          "description": "Đồ chơi mô hình các loại.",
+          "subcategory": [
+            {
+              "id": 1,
+              "name": "Mô hình xe hơi",
+              "path": "/product/cars",
+              "description": "Mô hình xe hơi và phụ kiện."
+            },
+            {
+              "id": 2,
+              "name": "Mô hình máy bay",
+              "path": "/product/planes",
+              "description": "Mô hình máy bay và phụ kiện."
+            },
+            {
+              "id": 3,
+              "name": "Mô hình tàu thuyền",
+              "path": "/product/ships",
+              "description": "Mô hình tàu thuyền và phụ kiện."
+            },
+            {
+              "id": 4,
+              "name": "Mô hình kiến trúc",
+              "path": "/product/architecture",
+              "description": "Mô hình các công trình kiến trúc nổi tiếng."
+            },
+            {
+              "id": 5,
+              "name": "Mô hình động vật",
+              "path": "/product/animals",
+              "description": "Mô hình các loài động vật."
+            }
+          ]
         },
         {
           "id": 4,
-          "name": "Siêu thú"
+          "name": "Đồ chơi điện tử",
+          "path": "/product/electronic",
+          "image": "",
+          "description": "Các loại đồ chơi điện tử và game cho trẻ em.",
+          "subcategory": [
+            {
+              "id": 1,
+              "name": "Máy chơi game cầm tay",
+              "path": "/product/handheld",
+              "description": "Máy chơi game di động cho trẻ em."
+            },
+            {
+              "id": 2,
+              "name": "Đồ chơi robot",
+              "path": "/product/robots",
+              "description": "Robot điều khiển từ xa và robot giáo dục."
+            },
+            {
+              "id": 3,
+              "name": "Máy tính học tập",
+              "path": "/product/learning-computers",
+              "description": "Máy tính đồ chơi hỗ trợ học tập."
+            },
+            {
+              "id": 4,
+              "name": "Đồng hồ thông minh",
+              "path": "/product/smartwatches",
+              "description": "Đồng hồ thông minh cho trẻ em."
+            },
+            {
+              "id": 5,
+              "name": "Drone đồ chơi",
+              "path": "/product/drones",
+              "description": "Drone điều khiển từ xa cho trẻ em."
+            }
+          ]
         },
         {
           "id": 5,
-          "name": "Siêu Sale Hàng Hiệu"
+          "name": "Đồ chơi xây dựng",
+          "path": "/product/construction",
+          "image": "",
+          "description": "Đồ chơi xây dựng và lắp ráp cho trẻ em.",
+          "subcategory": [
+            {
+              "id": 1,
+              "name": "Bộ xếp hình",
+              "path": "/product/building-blocks",
+              "description": "Các bộ xếp hình và gạch lắp ráp."
+            },
+            {
+              "id": 2,
+              "name": "Bộ dụng cụ xây dựng",
+              "path": "/product/tool-sets",
+              "description": "Bộ dụng cụ xây dựng đồ chơi cho trẻ em."
+            },
+            {
+              "id": 3,
+              "name": "Mô hình kiến trúc",
+              "path": "/product/architecture",
+              "description": "Bộ xây dựng mô hình kiến trúc."
+            },
+            {
+              "id": 4,
+              "name": "Đồ chơi cát",
+              "path": "/product/sand-toys",
+              "description": "Bộ đồ chơi cát và khuôn."
+            },
+            {
+              "id": 5,
+              "name": "Bộ lắp ráp cơ khí",
+              "path": "/product/mechanical",
+              "description": "Bộ lắp ráp cơ khí và kỹ thuật."
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Búp bê và nhân vật",
+          "path": "/product/dolls-figures",
+          "image": "",
+          "description": "Búp bê, nhân vật hành động và phụ kiện.",
+          "subcategory": [
+            {
+              "id": 1,
+              "name": "Búp bê",
+              "path": "/product/dolls",
+              "description": "Các loại búp bê và phụ kiện."
+            },
+            {
+              "id": 2,
+              "name": "Nhân vật hành động",
+              "path": "/product/action-figures",
+              "description": "Nhân vật hành động từ phim ảnh và truyện tranh."
+            },
+            {
+              "id": 3,
+              "name": "Nhà búp bê",
+              "path": "/product/dollhouses",
+              "description": "Nhà và nội thất cho búp bê."
+            },
+            {
+              "id": 4,
+              "name": "Bộ sưu tập nhân vật",
+              "path": "/product/collectibles",
+              "description": "Nhân vật sưu tập và phiên bản giới hạn."
+            },
+            {
+              "id": 5,
+              "name": "Phụ kiện búp bê",
+              "path": "/product/accessories",
+              "description": "Quần áo và phụ kiện cho búp bê."
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Đồ chơi âm nhạc",
+          "path": "/product/musical",
+          "description": "Nhạc cụ và đồ chơi âm nhạc cho trẻ em.",
+          "subcategory": [
+            {
+              "id": 1,
+              "name": "Nhạc cụ đồ chơi",
+              "path": "/product/instruments",
+              "description": "Các loại nhạc cụ đồ chơi cho trẻ em."
+            },
+            {
+              "id": 2,
+              "name": "Đồ chơi karaoke",
+              "path": "/product/karaoke",
+              "description": "Micro và bộ karaoke cho trẻ em."
+            },
+            {
+              "id": 3,
+              "name": "Nhạc cụ điện tử",
+              "path": "/product/electronic",
+              "description": "Nhạc cụ điện tử cho trẻ em."
+            },
+            {
+              "id": 4,
+              "name": "Bộ gõ",
+              "path": "/product/percussion",
+              "description": "Bộ gõ và nhạc cụ gõ cho trẻ em."
+            },
+            {
+              "id": 5,
+              "name": "Sách nhạc",
+              "path": "/product/music-books",
+              "description": "Sách và tài liệu học nhạc cho trẻ em."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Độ tuổi",
+      "path": "/product/age",
+      "image": "/images/menu-age-groups.jpg",
+      "description": "Sản phẩm phân theo độ tuổi để phù hợp với nhu cầu của trẻ.",
+      "category": [
+        {
+          "id": 1,
+          "name": "0-2 tuổi",
+          "path": "/product/0-2",
+          "image": "https://www.mykingdom.com.vn/cdn/shop/files/0_-_12_thang.jpg?v=1694142613&width=360",
+          "description": "Sản phẩm dành cho trẻ em từ 0-2 tuổi."
+        },
+        {
+          "id": 2,
+          "name": "3-5 tuổi",
+          "path": "/product/3-5",
+          "image": "https://www.mykingdom.com.vn/cdn/shop/files/1_-_3_tu_i.jpg?v=1694142613&width=360",
+          "description": "Sản phẩm dành cho trẻ em từ 3-5 tuổi."
+        },
+        {
+          "id": 3,
+          "name": "6-8 tuổi",
+          "path": "/product/6-8",
+          "image": "https://www.mykingdom.com.vn/cdn/shop/files/3_-_6_tu_i.jpg?v=1694142613&width=360",
+          "description": "Sản phẩm dành cho trẻ em từ 6-8 tuổi."
+        },
+        {
+          "id": 4,
+          "name": "9-12 tuổi",
+          "path": "/product/9-12",
+          "image": "https://www.mykingdom.com.vn/cdn/shop/files/6_-_12_tu_i.jpg?v=1694142613&width=360",
+          "description": "Sản phẩm dành cho trẻ em từ 6-8 tuổi."
+        },
+        {
+          "id": 5,
+          "name": "12 tuổi trở lên",
+          "path": "/product/12+",
+          "image": "https://www.mykingdom.com.vn/cdn/shop/files/Tren_12_tu_i.jpg?v=1694142613&width=360",
+          "description": "Sản phẩm dành cho trẻ em từ 12 tuổi trở lên."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Thương hiệu",
+      "path": "/brands",
+      "image": "/images/menu-brands.jpg",
+      "description": "Danh sách các thương hiệu nổi tiếng và sản phẩm của họ."
+    },
+    {
+      "id": 6,
+      "name": "Chương trình khuyến mãi",
+      "path": "/promotional-programs",
+      "image": "/images/menu-promotional-programs.jpg",
+      "description": "Thông tin về các chương trình khuyến mãi và sự kiện đặc biệt."
+    },
+    {
+      "id": 7,
+      "name": "Cẩm nang",
+      "path": "/guides",
+      "image": "/images/menu-guides.jpg",
+      "description": "Các hướng dẫn và cẩm nang hữu ích cho phụ huynh và trẻ em."
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Đồ chơi giáo dục",
+      "path": "/product/education",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
+      "description": "Các loại đồ chơi giúp trẻ em phát triển kỹ năng và trí tuệ.",
+      "subcategory": [
+        {
+          "id": 1,
+          "name": "Sách giáo dục",
+          "path": "/product/books",
+          "description": "Sách và tài liệu giáo dục cho trẻ em."
+        },
+        {
+          "id": 2,
+          "name": "Đồ chơi sáng tạo",
+          "path": "/product/creative",
+          "description": "Đồ chơi khuyến khích sự sáng tạo của trẻ em."
+        },
+        {
+          "id": 3,
+          "name": "Đồ chơi toán học",
+          "path": "/product/math",
+          "description": "Đồ chơi phát triển kỹ năng toán học."
+        },
+        {
+          "id": 4,
+          "name": "Đồ chơi ngôn ngữ",
+          "path": "/product/language",
+          "description": "Đồ chơi hỗ trợ phát triển kỹ năng ngôn ngữ."
+        },
+        {
+          "id": 5,
+          "name": "Đồ chơi khoa học",
+          "path": "/product/science",
+          "description": "Bộ dụng cụ thí nghiệm và đồ chơi khoa học."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Đồ chơi ngoài trời",
+      "path": "/product/outdoor",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_ph_ng_ti_n.jpg?v=1694141939",
+      "description": "Đồ chơi cho các hoạt động ngoài trời.",
+      "subcategory": [
+        {
+          "id": 1,
+          "name": "Bóng đá",
+          "path": "/product/football",
+          "description": "Bóng đá và các phụ kiện liên quan."
+        },
+        {
+          "id": 2,
+          "name": "Xe đạp",
+          "path": "/product/bikes",
+          "description": "Xe đạp và phụ kiện cho trẻ em."
+        },
+        {
+          "id": 3,
+          "name": "Cầu trượt",
+          "path": "/product/slides",
+          "description": "Cầu trượt và bộ chơi ngoài trời."
+        },
+        {
+          "id": 4,
+          "name": "Bể bơi",
+          "path": "/product/pools",
+          "description": "Bể bơi và đồ chơi dưới nước."
+        },
+        {
+          "id": 5,
+          "name": "Đu quay",
+          "path": "/product/swings",
+          "description": "Đu quay và xích đu cho trẻ em."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Đồ chơi mô hình",
+      "path": "/product/model",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_l_p_ghep.jpg?v=1694141939",
+      "description": "Đồ chơi mô hình các loại.",
+      "subcategory": [
+        {
+          "id": 1,
+          "name": "Mô hình xe hơi",
+          "path": "/product/cars",
+          "description": "Mô hình xe hơi và phụ kiện."
+        },
+        {
+          "id": 2,
+          "name": "Mô hình máy bay",
+          "path": "/product/planes",
+          "description": "Mô hình máy bay và phụ kiện."
+        },
+        {
+          "id": 3,
+          "name": "Mô hình tàu thuyền",
+          "path": "/product/ships",
+          "description": "Mô hình tàu thuyền và phụ kiện."
+        },
+        {
+          "id": 4,
+          "name": "Mô hình kiến trúc",
+          "path": "/product/architecture",
+          "description": "Mô hình các công trình kiến trúc nổi tiếng."
+        },
+        {
+          "id": 5,
+          "name": "Mô hình động vật",
+          "path": "/product/animals",
+          "description": "Mô hình các loài động vật."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Đồ chơi điện tử",
+      "path": "/product/electronic",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/Robot.jpg?v=1694141940",
+      "description": "Các loại đồ chơi điện tử và game cho trẻ em.",
+      "subcategory": [
+        {
+          "id": 1,
+          "name": "Máy chơi game cầm tay",
+          "path": "/product/handheld",
+          "description": "Máy chơi game di động cho trẻ em."
+        },
+        {
+          "id": 2,
+          "name": "Đồ chơi robot",
+          "path": "/product/robots",
+          "description": "Robot điều khiển từ xa và robot giáo dục."
+        },
+        {
+          "id": 3,
+          "name": "Máy tính học tập",
+          "path": "/product/learning-computers",
+          "description": "Máy tính đồ chơi hỗ trợ học tập."
+        },
+        {
+          "id": 4,
+          "name": "Đồng hồ thông minh",
+          "path": "/product/smartwatches",
+          "description": "Đồng hồ thông minh cho trẻ em."
+        },
+        {
+          "id": 5,
+          "name": "Drone đồ chơi",
+          "path": "/product/drones",
+          "description": "Drone điều khiển từ xa cho trẻ em."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Đồ chơi xây dựng",
+      "path": "/product/construction",
+      "image": "https://png.pngtree.com/thumb_back/fw800/background/20231221/pngtree-3d-three-dimensional-building-block-toys-image_15549351.png",
+      "description": "Đồ chơi xây dựng và lắp ráp cho trẻ em.",
+      "subcategory": [
+        {
+          "id": 1,
+          "name": "Bộ xếp hình",
+          "path": "/product/building-blocks",
+          "description": "Các bộ xếp hình và gạch lắp ráp."
+        },
+        {
+          "id": 2,
+          "name": "Bộ dụng cụ xây dựng",
+          "path": "/product/tool-sets",
+          "description": "Bộ dụng cụ xây dựng đồ chơi cho trẻ em."
+        },
+        {
+          "id": 3,
+          "name": "Mô hình kiến trúc",
+          "path": "/product/architecture",
+          "description": "Bộ xây dựng mô hình kiến trúc."
+        },
+        {
+          "id": 4,
+          "name": "Đồ chơi cát",
+          "path": "/product/sand-toys",
+          "description": "Bộ đồ chơi cát và khuôn."
+        },
+        {
+          "id": 5,
+          "name": "Bộ lắp ráp cơ khí",
+          "path": "/product/mechanical",
+          "description": "Bộ lắp ráp cơ khí và kỹ thuật."
         }
       ]
     },
     {
       "id": 6,
-      "name": "Kẹo đồ chơi",
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
-      "children": []
+      "name": "Búp bê và nhân vật",
+      "path": "/product/dolls-figures",
+      "image": "https://www.mykingdom.com.vn/cdn/shop/files/Bup_be.jpg?v=1694141939",
+      "description": "Búp bê, nhân vật hành động và phụ kiện.",
+      "subcategory": [
+        {
+          "id": 1,
+          "name": "Búp bê",
+          "path": "/product/dolls",
+          "description": "Các loại búp bê và phụ kiện."
+        },
+        {
+          "id": 2,
+          "name": "Nhân vật hành động",
+          "path": "/product/action-figures",
+          "description": "Nhân vật hành động từ phim ảnh và truyện tranh."
+        },
+        {
+          "id": 3,
+          "name": "Nhà búp bê",
+          "path": "/product/dollhouses",
+          "description": "Nhà và nội thất cho búp bê."
+        },
+        {
+          "id": 4,
+          "name": "Bộ sưu tập nhân vật",
+          "path": "/product/collectibles",
+          "description": "Nhân vật sưu tập và phiên bản giới hạn."
+        },
+        {
+          "id": 5,
+          "name": "Phụ kiện búp bê",
+          "path": "/product/accessories",
+          "description": "Quần áo và phụ kiện cho búp bê."
+        }
+      ]
     },
     {
       "id": 7,
-      "name": "Đồ chơi lắp ghép",
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
-      "children": []
+      "name": "Đồ chơi âm nhạc",
+      "path": "/product/musical",
+      "description": "Nhạc cụ và đồ chơi âm nhạc cho trẻ em.",
+      "subcategory": [
+        {
+          "id": 1,
+          "name": "Nhạc cụ đồ chơi",
+          "path": "/product/instruments",
+          "description": "Các loại nhạc cụ đồ chơi cho trẻ em."
+        },
+        {
+          "id": 2,
+          "name": "Đồ chơi karaoke",
+          "path": "/product/karaoke",
+          "description": "Micro và bộ karaoke cho trẻ em."
+        },
+        {
+          "id": 3,
+          "name": "Nhạc cụ điện tử",
+          "path": "/product/electronic",
+          "description": "Nhạc cụ điện tử cho trẻ em."
+        },
+        {
+          "id": 4,
+          "name": "Bộ gõ",
+          "path": "/product/percussion",
+          "description": "Bộ gõ và nhạc cụ gõ cho trẻ em."
+        },
+        {
+          "id": 5,
+          "name": "Sách nhạc",
+          "path": "/product/music-books",
+          "description": "Sách và tài liệu học nhạc cho trẻ em."
+        }
+      ]
+    }
+  ],
+  "brands": [
+    {
+      "name": "ROBOCAR POLI",
+      "logo": "https://example.com/robocar-poli-logo.png"
     },
     {
-      "id": 8,
-      "name": "Đồ chơi sáng tạo",
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
-      "children": []
+      "name": "MINIFORCE",
+      "logo": "https://example.com/miniforce-logo.png"
     },
     {
-      "id": 9,
-      "name": "Đồ thời trang",
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
-      "children": []
+      "name": "SweetCandy",
+      "logo": "https://example.com/sweetcandy-logo.png"
     },
     {
-      "id": 10,
-      "name": "Thế giới động vật",
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
-      "children": []
+      "name": "Lego",
+      "logo": "https://example.com/lego-logo.png"
     },
     {
-      "id": 11,
-      "name": "Đồ chơi mô phỏng",
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
-      "children": []
+      "name": "CreativeToys",
+      "logo": "https://example.com/creativetoys-logo.png"
     },
     {
-      "id": 12,
-      "name": "Thú bông",
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
-      "children": []
+      "name": "FashionKids",
+      "logo": "https://example.com/fashionkids-logo.png"
     },
     {
-      "id": 13,
-      "name": "Robot",
-      "img": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
-      "children": []
+      "name": "WildWorld",
+      "logo": "https://example.com/wildworld-logo.png"
+    },
+    {
+      "name": "PoliceToys",
+      "logo": "https://example.com/policetoys-logo.png"
+    },
+    {
+      "name": "SoftToys",
+      "logo": "https://example.com/softtoys-logo.png"
+    },
+    {
+      "name": "RobotX",
+      "logo": "https://example.com/robotx-logo.png"
+    },
+    {
+      "name": "BuildRobot",
+      "logo": "https://example.com/buildrobot-logo.png"
+    },
+    {
+      "name": "CandyFun",
+      "logo": "https://example.com/candyfun-logo.png"
+    },
+    {
+      "name": "InnovativeToys",
+      "logo": "https://example.com/innovativetoys-logo.png"
+    },
+    {
+      "name": "FashionForKids",
+      "logo": "https://example.com/fashionforkids-logo.png"
+    },
+    {
+      "name": "OceanWorld",
+      "logo": "https://example.com/oceanworld-logo.png"
+    },
+    {
+      "name": "TrainToys",
+      "logo": "https://example.com/traintoys-logo.png"
+    },
+    {
+      "name": "PlushFriends",
+      "logo": "https://example.com/plushfriends-logo.png"
+    },
+    {
+      "name": "EduRobot",
+      "logo": "https://example.com/edurobot-logo.png"
+    },
+    {
+      "name": "CityLego",
+      "logo": "https://example.com/citylego-logo.png"
     }
   ]
 }

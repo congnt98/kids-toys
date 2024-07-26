@@ -5,7 +5,7 @@
     background-size: 100% 100%;
     border-color: rgb(238, 235, 235);
     background-color: rgba(0, 0, 0, 0);
-    padding: 34px 24px ;
+    padding: 34px 24px;
     border-radius: 24px;
     display: flex;
     flex-direction: column;
@@ -14,8 +14,8 @@
     font-size: 16px;
     line-height: 14px;
     color: #8f8f8f;
-
 }
+
 .vendor-sku {
     display: flex;
     align-items: center;
@@ -73,7 +73,7 @@
 .add-product {
     margin-right: auto;
     background-color: rgb(189, 48, 55);
-    color: #ffff;
+    color: $color-white;
     text-transform: capitalize;
     border-radius: 12px;
     flex: 1;
@@ -105,11 +105,32 @@
         display: block;
         content: "";
     }
-    &.active::after{
+    &.active::after {
         background-image: url(../../images/icon/wishlist.svg);
-
     }
 }
 .swym-tooltip {
     display: none;
+}
+
+.product-image {
+    position: relative;
+}
+.highlight-sale {
+    transform: rotate(15deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: $color-accent;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
 }

@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const ProductItem = (props) => {
-  const { image, name, sku, vendor, price, price_sale } = props;
+  const { image, name, sku, vendor, price, sale } = props;
   return (
     <>
       <div className="product-item w-[calc(100%/3-8px)] mx-[4px] mb-6">
         <div className="product-header">
           <Link className="product-image">
             <img src={image} alt="#" />
+            <span className="highlight-sale">
+              <span>-{sale}%</span>
+            </span>
           </Link>
         </div>
         <Link className="product-footer">
@@ -21,8 +24,8 @@ const ProductItem = (props) => {
             </div>
             <div className="name">{name}</div>
             <div className="price-wrapper">
-              <div className="price">{price} Đ</div>
-              <div className="price-sale">{price_sale} Đ</div>
+              <div className="price">{price - price * (sale / 100)} Đ</div>
+              <div className="price-sale">{price} Đ</div>
             </div>
           </div>
           <div className="product-link">

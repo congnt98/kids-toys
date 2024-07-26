@@ -44,7 +44,7 @@ const Banner = () => {
         {data?.map((item, key) => (
           <SwiperSlide className="hero-slide-item" key={key}>
             <div className="hero-slide-bg">
-              <img src={item.img} alt={item.title} />
+              <img src={item.image} alt={item.title} />
             </div>
           </SwiperSlide>
         ))}
@@ -59,7 +59,7 @@ const Banner = () => {
         >
           <path
             d="M20.0607 25.0607L24.4393 29.4393C25.3843 30.3843 27 29.715 27 28.3787L27 19.6213C27 18.285 25.3843 17.6157 24.4393 18.5607L20.0607 22.9393C19.4749 23.5251 19.4749 24.4749 20.0607 25.0607Z"
-            fill="#CF102D"
+            fill="$color-accent"
           ></path>
           <rect
             x="1.5"
@@ -67,7 +67,7 @@ const Banner = () => {
             width="45"
             height="45"
             rx="22.5"
-            stroke="#CF102D"
+            stroke="$color-accent"
             strokeWidth="3"
           ></rect>
         </svg>
@@ -82,7 +82,7 @@ const Banner = () => {
         >
           <path
             d="M20.0607 25.0607L24.4393 29.4393C25.3843 30.3843 27 29.715 27 28.3787L27 19.6213C27 18.285 25.3843 17.6157 24.4393 18.5607L20.0607 22.9393C19.4749 23.5251 19.4749 24.4749 20.0607 25.0607Z"
-            fill="#CF102D"
+            fill="$color-accent"
           ></path>
           <rect
             x="1.5"
@@ -90,7 +90,7 @@ const Banner = () => {
             width="45"
             height="45"
             rx="22.5"
-            stroke="#CF102D"
+            stroke="$color-accent"
             strokeWidth="3"
           ></rect>
         </svg>

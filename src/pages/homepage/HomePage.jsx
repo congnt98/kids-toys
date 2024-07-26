@@ -5,9 +5,8 @@ import "react-multi-carousel/lib/styles.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 import FeaturedCategories from "Layout/main/FeaturedCategories";
-import ProductCatalog from "Layout/main/ProductCatalog";
-import SexCatalog from "Layout/main/SexCatalog";
 import Banner from "Layout/main/Banner";
+import AgeCatalog from "Layout/main/AgeCatalog";
 
 const HomePage = () => {
   return (
@@ -25,13 +24,12 @@ const HomePage = () => {
 
       <section className="section-product-catalog">
         <div className="container">
-          <ProductCatalog />
         </div>
       </section>
 
       <section className="section-sex-catalog">
         <div className="container">
-          <SexCatalog />
+          <AgeCatalog />
         </div>
       </section>
     </>

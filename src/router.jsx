@@ -1,11 +1,14 @@
-import { Route, Routes } from "react-router-dom";
-import Homepage from "./pages/homepage/HomePage";
-import { ROUTERS } from "./utils/router";
 import { memo } from "react";
-import Product from "./pages/product/ProductPage";
-import Notfound from "./pages/notfound/NotFoundPage";
+import { Route, Routes } from "react-router-dom";
+import { ROUTERS } from "./utils/router";
 import DefaultLayout from "Layout/customRouterLayout/DefaultLayout";
 import SidebarLayout from "Layout/customRouterLayout/SidebarLayout";
+import Homepage from "./pages/homepage/HomePage";
+import Product from "./pages/product/ProductPage";
+import Notfound from "./pages/notfound/NotFoundPage";
+import BrandsPage from "pages/brands/BrandsPage";
+import GuidesPage from "pages/guides/GuidesPage";
+import PromotionalPrograms from "pages/promotional-programs/PromotionalPrograms";
 
 const userRouter = [
   {
@@ -19,9 +22,24 @@ const userRouter = [
     layout: SidebarLayout,
   },
   {
-    path: `/${ROUTERS.USER.PRODUCT}/:cat`,
+    path: `/${ROUTERS.USER.PRODUCT}/:category`,
     component: <Product />,
     layout: SidebarLayout,
+  },
+  {
+    path: ROUTERS.USER.BRANDS,
+    component: <BrandsPage />,
+    layout: DefaultLayout,
+  },
+  {
+    path: ROUTERS.USER.GUIDES,
+    component: <GuidesPage />,
+    layout: DefaultLayout,
+  },
+  {
+    path: ROUTERS.USER.PROMOTIONALPROGRAMS,
+    component: <PromotionalPrograms />,
+    layout: DefaultLayout,
   },
   {
     path: ROUTERS.USER.NOTFOUND,

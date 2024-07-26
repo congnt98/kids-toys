@@ -1,12 +1,16 @@
 import React from "react";
 import FilterCatItem from "component/FilterCatItem";
 import { useQuery } from "@tanstack/react-query";
-import categoryAPI from "api/categoryAPI";
+import CategoryAPI from "api/CategoryAPI";
 
 const FilterProduct = () => {
-  const { isLoading, error, data } = useQuery({
+  const {
+    isLoading,
+    error,
+    data: dataCategory,
+  } = useQuery({
     queryKey: ["banners"],
-    queryFn: categoryAPI.getAllCategory,
+    queryFn: CategoryAPI.getAllCategory,
   });
 
   if (isLoading) {
@@ -16,7 +20,6 @@ const FilterProduct = () => {
   if (error) {
     return <div>Error: {error.message}</div>;
   }
-
   return (
     <div className="left-content md:w-[284px] w-full relative">
       <div className="filter-tree py-4 border-b-[1px] border-[#ededed]">
@@ -27,8 +30,12 @@ const FilterProduct = () => {
         </div>
         <div className="filter-wrapper max-h-[350px] overflow-auto pr-[10px]">
           <ul className="filter-items p-0 m-0">
-            {data?.map((item, index) => (
-              <FilterCatItem key={index} cat={item} subCat={item.children} />
+            {dataCategory?.map((category, index) => (
+              <FilterCatItem
+                key={index}
+                cat={category}
+                subCat={category.subcategory}
+              />
             ))}
           </ul>
         </div>

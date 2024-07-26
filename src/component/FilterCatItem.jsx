@@ -13,11 +13,13 @@ const FilterCatItem = (props) => {
     if (newSelectCat !== null) {
       let slug = convertSlug(newSelectCat);
       navigate(`/product/${slug}`);
+    } else{
+      navigate("/product/");
     }
   };
 
   const handleCatClick = (nameCat) => {
-    setSelectedCategories(null)
+    setSelectedCategories(null);
     let slug = convertSlug(nameCat);
     navigate(`/product/${slug}`);
   };

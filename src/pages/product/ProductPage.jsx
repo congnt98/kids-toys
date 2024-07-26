@@ -1,40 +1,106 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import ProductItem from "component/ProductItem";
 import { useQuery } from "@tanstack/react-query";
-import productAPI from "api/productAPI";
-import { useParams } from "react-router-dom";
-import { convertSlug } from "utils/stringUtils";
+import ProductAPI from "api/ProductAPI";
+import { useLocation, useParams } from "react-router-dom";
 import { CiGrid41 } from "react-icons/ci";
 import { Tooltip } from "react-tooltip";
 import { MdOutlineGridOn } from "react-icons/md";
 import Dropdown from "component/Dropdown";
 
 const Product = () => {
-  const [sortProduct, setSortProduct] = useState("asc");
   const [viewMode, setViewMode] = useState("grid-three");
-  const [filterProductByCat, setFilterProductByCat] = useState(null);
-  const { cat } = useParams();
+  const [sortProduct, setSortProduct] = useState("default");
+  const { category } = useParams();
+  const location = useLocation();
 
-  const { data } = useQuery({
-    queryKey: ["product"],
-    queryFn: productAPI.getAllProducts,
+  const sortOption = [
+    { value: "default", label: "Mặc định" },
+    { value: "asc", label: "A to Z" },
+    { value: "desc", label: "Z to A" },
+  ];
+
+  const {
+    data: products,
+    isLoading: productsLoading,
+    isError: productsError,
+  } = useQuery({
+    queryKey: ["allProduct"],
+    queryFn: ProductAPI.getAllProducts,
   });
 
-  useEffect(() => {
-    setFilterProductByCat(cat || null);
-  }, [cat]);
+  const {
+    data: productsByCategory,
+    isLoading: productsByCategoryLoading,
+    isError: productsByCategoryError,
+  } = useQuery({
+    queryKey: ["productsByCategory", category],
+    queryFn: () => ProductAPI.getProductsByCategory(category),
+    enabled: !!category,
+  });
 
-  const productRender = data?.filter((product) =>
-    filterProductByCat !== null
-      ? convertSlug(product.category.toString()) === filterProductByCat
-      : true
-  );
+  const {
+    data: productNewArrivals,
+    isLoading: productNewArrivalsLoading,
+    isError: productNewArrivalsError,
+  } = useQuery({
+    queryKey: ["productNewArrivals"],
+    queryFn: ProductAPI.getNewArrivals,
+    enabled: location.pathname === "/product/new",
+  });
+
+  const {
+    data: productBigSale,
+    isLoading: productBigSalesLoading,
+    isError: productBigSalesError,
+  } = useQuery({
+    queryKey: ["productBigSale"],
+    queryFn: ProductAPI.getProductBigSale,
+  });
+
+  const productSort = (productsList) => {
+    if (!productsList) return [];
+    const sortedProducts = [...productsList];
+    if (sortProduct === "asc") {
+      sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortProduct === "desc") {
+      sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
+    }
+    return sortedProducts;
+  };
+
+  const productRender = (() => {
+    if (location.pathname.startsWith("/product/sale"))
+      return productSort(productBigSale);
+    if (location.pathname.startsWith("/product/new"))
+      return productSort(productNewArrivals);
+    else if (category) return productSort(productsByCategory);
+    else return productSort(products);
+  })();
 
   const filteredProductCount = productRender ? productRender.length : 0;
 
   const handleViewChange = (mode) => {
     setViewMode(mode);
   };
+
+  if (
+    productsLoading ||
+    productsByCategoryLoading ||
+    productNewArrivalsLoading ||
+    productBigSalesLoading
+  ) {
+    return <p>Loading...</p>;
+  }
+
+  if (
+    productsError ||
+    productsByCategoryError ||
+    productNewArrivalsError ||
+    productBigSalesError
+  ) {
+    return <p>Error loading products.</p>;
+  }
 
   return (
     <>
@@ -72,8 +138,13 @@ const Product = () => {
           <div className="text-count">{filteredProductCount}</div>
         </div>
         <div className="top">
-          <span className="label">sắp xếp theo</span>
-          <Dropdown />
+          <Dropdown
+            name={"sort-product"}
+            label={"sắp xếp theo"}
+            options={sortOption}
+            value={sortProduct}
+            onChange={setSortProduct}
+          />
         </div>
       </div>
       <div className={`product-list flex flex-wrap mx-[-8px] ${viewMode}`}>
@@ -86,7 +157,7 @@ const Product = () => {
               sku={item.sku}
               vendor={item.vendor}
               price={item.price}
-              price_sale={item.price_sale}
+              sale={item.sale}
               viewMode={viewMode}
             />
           ))

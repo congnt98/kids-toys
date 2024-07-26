@@ -48,7 +48,7 @@ const CarouselComponent = ({
           modules={[Scrollbar]}
           className={`${nameCarousel}-swiper swiper-progressbar-scrollbar`}
         >
-          {dataCarousel.map((dataCarouselItem, index) => (
+          {dataCarousel?.map((dataCarouselItem, index) => (
             <SwiperSlide key={index} virtualIndex={index}>
               <CardImageItem dataCard={dataCarouselItem} />
             </SwiperSlide>

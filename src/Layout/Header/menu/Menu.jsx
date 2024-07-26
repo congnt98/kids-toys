@@ -1,104 +1,66 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ROUTERS } from "../../../utils/router";
 import { FaCaretDown } from "react-icons/fa6";
+import { useQuery } from "@tanstack/react-query";
+import MenuAPI from "api/Menu";
 
 const Menu = () => {
-  const [menus] = useState([
-    {
-      name: "HÀNG MỚI",
-      path: ROUTERS.USER.PRODUCTNEW,
-    },
-    {
-      name: "Flash Sale",
-      path: ROUTERS.USER.FLASHSALE,
-    },
-    {
-      name: "Sản Phẩm",
-      path: ROUTERS.USER.PRODUCT,
-      isShowSubMenu: false,
-      child: [
-        {
-          name: "Product New",
-          path: "product-new",
-        },
-        {
-          name: "Product Sale",
-          path: "product-sale",
-        },
-        {
-          name: "Product Best-Selling",
-          path: "product-best-selling",
-        },
-      ],
-    },
-    {
-      name: "Giới Tính",
-      path: ROUTERS.USER.SEX,
-      child: [
-        {
-          name: "BÉ TRAI",
-          path: "collections/betrai",
-        },
-        {
-          name: "BÉ GÁI",
-          path: "collections/begai",
-        },
-        {
-          name: "UNISEX",
-          path: "collections/unisex",
-        },
-      ],
-    },
-    {
-      name: "Độ Tuổi",
-      path: ROUTERS.USER.AGE,
-    },
-    {
-      name: "Thương Hiệu",
-      path: ROUTERS.USER.TRADEMARK,
-    },
-    {
-      name: "Khuyến Mãi",
-      path: ROUTERS.USER.PROMOTION,
-    },
-    {
-      name: "Chương Trình Thành Viên",
-      path: ROUTERS.USER.MEMBERSHIP,
-    },
-    {
-      name: "Cẩm Nang",
-      path: ROUTERS.USER.HANDBOOK,
-    },
-  ]);
+  const { data: dataMenu } = useQuery({
+    queryKey: ["menu"],
+    queryFn: MenuAPI.getAllMenu,
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: false,
+  });
 
-  const listMenus = menus?.map((menu, menuKey) => (
-    <li
-      key={menuKey}
-      className={menuKey === 0 ? "has-children active" : "has-children"}
-    >
-      <Link to={menu.path}>
-        <span> {menu.name}</span>
-      </Link>
-      {menu.child && <FaCaretDown />}
-      {menu.child && (
-        <ul className="sub-menu">
-          {menu.child.map((subMenu, subMenuKey) => (
-            <li key={`${menuKey} - ${subMenuKey}`}>
-              <Link to={subMenu.path}>
-                <span>{subMenu.name}</span>
+  const renderSubMenu = (submenus, level = 1) => {
+    return (
+      <>
+        <ul className={`menu-items submenu menu-items-level-${level}`}>
+          {submenus.map((submenu) => (
+            <li
+              key={submenu.id}
+              className={`menu-item menu-item-level-${level} ${
+                submenu.image ? "has-image" : ""
+              }`}
+            >
+              <Link to={submenu.path}>
+                <span> {submenu.name}</span>
+                {submenu.image && (
+                  <img src={submenu.image} alt={submenu.name} />
+                )}
+                {submenu.subcategory && level === 1 && <FaCaretDown />}
               </Link>
+              {submenu.subcategory &&
+                renderSubMenu(submenu.subcategory, level + 1)}
             </li>
           ))}
         </ul>
-      )}
-    </li>
-  ));
+      </>
+    );
+  };
 
   return (
     <>
       <div className="main-menu">
-        <ul>{listMenus}</ul>
+        <ul className="menu-items menu-items-level-0">
+          {dataMenu?.map((menu, menuKey) => (
+            <li
+              key={menuKey}
+              className={`menu-item  ${
+                menuKey === 0 ? "active" : ""
+              } menu-item-level-0`}
+            >
+              <Link to={menu.path}>
+                <span> {menu.name}</span>
+              </Link>
+              {menu.category && <FaCaretDown />}
+              {menu.category && (
+                <div className="wrapper-submenu">
+                  {renderSubMenu(menu.category)}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

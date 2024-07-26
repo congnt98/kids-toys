@@ -1,0 +1,59 @@
+
+$font-helvetica: "Helvetica Neue";
+$font-plus: "Plus Jakarta Sans";
+
+.brand-pages {
+  min-height: 100vh;
+
+  h1 {
+    color: $color-link;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 0;
+
+    li {
+      background-color: $color-white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid $color-gray;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      a {
+        color: $color-link;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        border: 1px solid $color-gray;
+      }
+    }
+  }
+}

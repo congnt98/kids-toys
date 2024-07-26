@@ -1,12 +1,12 @@
 import { CardImageItem } from "component/CardImageItem";
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import categoryAPI from "api/categoryAPI";
+import CategoryAPI from "api/CategoryAPI";
 
 const FeaturedCategories = () => {
   const { data, error, isLoading } = useQuery({
     queryKey: ["category"],
-    queryFn: categoryAPI.getAllCategory, // Sửa hàm gọi đúng cách
+    queryFn: CategoryAPI.getAllCategory, 
   });
 
   if (isLoading) {
@@ -36,7 +36,7 @@ const FeaturedCategories = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-wrap">{listCard6}</div>
+      <div className="card-items w-full flex flex-wrap">{listCard6}</div>
     </>
   );
 };

@@ -1,10 +1,10 @@
 import { fetchData } from "./axios";
 
-const categoryAPI = {
+const CategoryAPI = {
   getAllCategory: async () => {
     const data = await fetchData("/category");
     return data;
   },
 };
 
-export default categoryAPI;
+export default CategoryAPI;

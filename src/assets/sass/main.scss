@@ -1,24 +1,27 @@
-@import 'config/variables';
-@import 'config/mixins';
+@import url("https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap");
 
-@import 'base';
+// Tiếp tục khai báo các biến font như trên
+
+@import "config/variable";
+@import "config/mixins";
+
+@import "base";
 
 // components
-@import 'components/carousel';
-@import 'components/filter-cat-item';
-@import 'components/product-item';
-
-
+@import "components/carousel";
+@import "components/dropdowm";
+@import "components/filter-cat-item";
+@import "components/product-item";
 
 // layout
-@import'layout/1_header';
-@import'layout/2_section';
-@import 'layout/footer';
+@import "layout/1_header";
+@import "layout/2_section";
+@import "layout/footer";
 
 // pages
-@import 'pages/home';
-@import 'pages/product';
-
+@import "pages/home";
+@import "pages/product";
+@import "pages/brands";
 
 // res
-@import 'responsive'
+@import "responsive";
