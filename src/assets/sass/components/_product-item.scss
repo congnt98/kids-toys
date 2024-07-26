@@ -115,6 +115,8 @@
 
 .product-image {
     position: relative;
+    min-height: 225px;
+    display: block;
 }
 .highlight-sale {
     transform: rotate(15deg);

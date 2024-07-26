@@ -15,8 +15,7 @@ export const Footer = () => {
             <div className="single-footer-widget">
               <h1 className="widget-title">About Us</h1>
               <p className="desc-content">
-                We are a team of designers and developers that create high
-                quality wordpress, shopify, Opencart
+                hello i'm front-end developer
               </p>
               <div className="widget-social justify-content-start mb-n2">
                 <Link title="Facebook" t0="">
@@ -47,7 +46,7 @@ export const Footer = () => {
                 </li>
                 <li>
                 <MdOutlineMail />
-                  <a href="mailto:info@example.com"> info@example.com</a>
+                  <a href="mailto:info@example.com"> ntcong.exe@gamil.com</a>
                 </li>
                 <li>
                 <FaPhone />
@@ -61,19 +60,19 @@ export const Footer = () => {
               <h2 className="widget-title">Information</h2>
               <ul className="widget-list">
                 <li>
-                  <Link to="" >Terms &amp; Conditions</Link>
+                  <Link to="" ></Link>
                 </li>
                 <li>
-                  <Link to="">Payment Methode</Link>
+                  <Link to=""></Link>
                 </li>
                 <li>
-                  <Link to="">Product Warranty</Link>
+                  <Link to=""></Link>
                 </li>
                 <li>
                   <Link to="">Return Process</Link>
                 </li>
                 <li>
-                  <Link to="">Payment Security</Link>
+                  <Link to=""></Link>
                 </li>
               </ul>
             </div>
@@ -101,7 +100,7 @@ export const Footer = () => {
                 </div>
 
                 <p className="desc-content mb-0">
-                  Join over 1,000 people who get free and fresh content
+                  Join over 1+ people who get free and fresh content
                   delivered automatically each time we publish
                 </p>
               </div>
@@ -117,9 +116,9 @@ export const Footer = () => {
           <div className="w-full text-center">
             <div className="copyright-content">
               <p className="mb-0">
-                © 2022 <strong>Toyqo </strong> Made with
+                © 2024 <strong>HCM </strong> Made with
                 <FaHeart /> by
-                <Link to="https://hasthemes.com/">HasThemes.</Link>
+                <Link to="https://hasthemes.com/">ntcong.</Link>
               </p>
             </div>
           </div>

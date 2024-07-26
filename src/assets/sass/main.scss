@@ -19,9 +19,14 @@
 @import "layout/footer";
 
 // pages
+@import "pages/update-page";
 @import "pages/home";
 @import "pages/product";
 @import "pages/brands";
+@import "pages/promotional-programs-page.scss";
+@import "pages/guides-page.scss";
+
+
 
 // res
 @import "responsive";

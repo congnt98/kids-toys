@@ -25,6 +25,7 @@ const Action = () => {
       ),
       name: "account",
       description: "Đăng nhập",
+      slug: "user",
     },
     {
       svg: (
@@ -51,6 +52,7 @@ const Action = () => {
       ),
       name: "cart",
       description: "Giỏ hàng",
+      slug: "cart",
     },
   ]);
 
@@ -59,6 +61,7 @@ const Action = () => {
       key={index}
       name={action.name}
       icon={action.svg}
+      slug={action.slug}
       description={action.description}
     />
   ));

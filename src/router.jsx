@@ -8,7 +8,7 @@ import Product from "./pages/product/ProductPage";
 import Notfound from "./pages/notfound/NotFoundPage";
 import BrandsPage from "pages/brands/BrandsPage";
 import GuidesPage from "pages/guides/GuidesPage";
-import PromotionalPrograms from "pages/promotional-programs/PromotionalPrograms";
+import UpdatePage from "pages/update/UpdatePage";
 
 const userRouter = [
   {
@@ -38,7 +38,17 @@ const userRouter = [
   },
   {
     path: ROUTERS.USER.PROMOTIONALPROGRAMS,
-    component: <PromotionalPrograms />,
+    component: <UpdatePage />,
+    layout: DefaultLayout,
+  },
+  {
+    path: ROUTERS.USER.USER,
+    component: <UpdatePage />,
+    layout: DefaultLayout,
+  },
+  {
+    path: ROUTERS.USER.CART,
+    component: <UpdatePage />,
     layout: DefaultLayout,
   },
   {
