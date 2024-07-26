@@ -9,6 +9,8 @@ export const ROUTERS = {
     AGE: "age",
     TRADEMARK: "trademark",
     BRAND: "brand",
+    USER: "user",
+    CART: "cart",
     NOTFOUND: "*",
   },
 };

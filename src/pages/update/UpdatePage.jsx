@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PromotionalPrograms = () => {
+const UpdatePage = () => {
   return (
     <>
-      <div className="promotional-programs-page">
+      <div className="update-page">
         <div className="container">
           <div className="content-wrapper">
             <h1>Trang Đang Cập Nhật</h1>
@@ -32,4 +32,4 @@ const PromotionalPrograms = () => {
   );
 };
 
-export default PromotionalPrograms;
+export default UpdatePage;
