@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductItem from "component/ProductItem";
 import { useQuery } from "@tanstack/react-query";
 import ProductAPI from "api/ProductAPI";
@@ -7,12 +7,16 @@ import { CiGrid41 } from "react-icons/ci";
 import { Tooltip } from "react-tooltip";
 import { MdOutlineGridOn } from "react-icons/md";
 import Dropdown from "component/Dropdown";
+import { parseAge, sortArr } from "utils/stringUtils";
 
 const Product = () => {
   const [viewMode, setViewMode] = useState("grid-three");
+  const [productByAge, setProductByAge] = useState([]);
   const [sortProduct, setSortProduct] = useState("default");
   const { category } = useParams();
   const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const ageParam = searchParams.get("age");
 
   const sortOption = [
     { value: "default", label: "Mặc định" },
@@ -20,62 +24,53 @@ const Product = () => {
     { value: "desc", label: "Z to A" },
   ];
 
-  const {
-    data: products,
-    isLoading: productsLoading,
-    isError: productsError,
-  } = useQuery({
+  const { data: products } = useQuery({
     queryKey: ["allProduct"],
     queryFn: ProductAPI.getAllProducts,
   });
 
-  const {
-    data: productsByCategory,
-    isLoading: productsByCategoryLoading,
-    isError: productsByCategoryError,
-  } = useQuery({
+  const { data: productsByCategory } = useQuery({
     queryKey: ["productsByCategory", category],
     queryFn: () => ProductAPI.getProductsByCategory(category),
     enabled: !!category,
   });
 
-  const {
-    data: productNewArrivals,
-    isLoading: productNewArrivalsLoading,
-    isError: productNewArrivalsError,
-  } = useQuery({
+  const { data: productNewArrivals } = useQuery({
     queryKey: ["productNewArrivals"],
     queryFn: ProductAPI.getNewArrivals,
     enabled: location.pathname === "/product/new",
   });
 
-  const {
-    data: productBigSale,
-    isLoading: productBigSalesLoading,
-    isError: productBigSalesError,
-  } = useQuery({
+  const { data: productBigSale } = useQuery({
     queryKey: ["productBigSale"],
     queryFn: ProductAPI.getProductBigSale,
   });
 
-  const productSort = (productsList) => {
-    if (!productsList) return [];
-    const sortedProducts = [...productsList];
-    if (sortProduct === "asc") {
-      sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortProduct === "desc") {
-      sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
-    }
-    return sortedProducts;
-  };
+  useEffect(() => {
+    const ProductByage = () => {
+      if (ageParam) {
+        const [filterAgeMin, filterAgeMax] = parseAge(ageParam);
+        const productByAge = products?.filter((product) => {
+          const [productAgeMin, productAgeMax] = parseAge(product.age);
+          return (
+            filterAgeMin <= productAgeMax &&
+            (filterAgeMax === Infinity || filterAgeMax >= productAgeMin)
+          );
+        });
+        setProductByAge(productByAge);
+      } else setProductByAge(products);
+    };
+    ProductByage();
+  }, [ageParam, products]);
 
   const productRender = (() => {
-    if (location.pathname.startsWith("/product/sale"))
-      return productSort(productBigSale);
-    if (location.pathname.startsWith("/product/new"))
-      return productSort(productNewArrivals);
-    else if (category) return productSort(productsByCategory);
-    else return productSort(products);
+    if (ageParam) return sortArr(productByAge, "name", sortProduct);
+    else if (location.pathname.startsWith("/product/sale"))
+      return sortArr(productBigSale, "name", sortProduct);
+    else if (location.pathname.startsWith("/product/new"))
+      return sortArr(productNewArrivals, "name", sortProduct);
+    else if (category) return sortArr(productsByCategory, "name", sortProduct);
+    else return sortArr(products, "name", sortProduct);
   })();
 
   const filteredProductCount = productRender ? productRender.length : 0;
@@ -83,24 +78,6 @@ const Product = () => {
   const handleViewChange = (mode) => {
     setViewMode(mode);
   };
-
-  if (
-    productsLoading ||
-    productsByCategoryLoading ||
-    productNewArrivalsLoading ||
-    productBigSalesLoading
-  ) {
-    return <p>Loading...</p>;
-  }
-
-  if (
-    productsError ||
-    productsByCategoryError ||
-    productNewArrivalsError ||
-    productBigSalesError
-  ) {
-    return <p>Error loading products.</p>;
-  }
 
   return (
     <>

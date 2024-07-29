@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import FilterCatItem from "component/FilterCatItem";
 import { useQuery } from "@tanstack/react-query";
 import CategoryAPI from "api/CategoryAPI";
 
 const FilterProduct = () => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const handleSubCatClick = (nameSubCat) => {
+    setSelectedCategory(nameSubCat === selectedCategory ? null : nameSubCat);
+  };
+  const handleCatClick = (nameCat) => {
+    setSelectedCategory(nameCat === selectedCategory ? null : nameCat);
+  };
+
   const {
     isLoading,
     error,
@@ -35,6 +44,9 @@ const FilterProduct = () => {
                 key={index}
                 cat={category}
                 subCat={category.subcategory}
+                selectedSubCategory={selectedCategory}
+                onSubCatClick={handleSubCatClick}
+                onCatClick={handleCatClick}
               />
             ))}
           </ul>
