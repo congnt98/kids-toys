@@ -16,7 +16,7 @@ export const CardImageItem = (props) => {
               {dataCard.name}
             </h3>
             <Link
-              to={dataCard.name ? `product/${convertSlug(dataCard.name)}` : "#"}
+              to={dataCard.path ? convertSlug(dataCard.path) : "#"}
               className="btn-default mt-3 py-2 px-[30px] text-color text-xs lg:text-base md:border-[3px] border-solid border-2 border-red rounded-[40px] mt-3  inline-block"
             >
               Xem Thêm

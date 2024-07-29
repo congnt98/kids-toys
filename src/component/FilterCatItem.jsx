@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { convertSlug } from "utils/stringUtils";
 const FilterCatItem = (props) => {
-  const [selectedCategories, setSelectedCategories] = useState(null);
   const [hide, setHide] = useState(false);
-  const { cat, subCat } = props;
+  const { cat, subCat, onSubCatClick, onCatClick, selectedSubCategory } = props;
   const navigate = useNavigate();
 
   const handleSubCatClick = (nameSubCat) => {
-    let newSelectCat = nameSubCat === selectedCategories ? null : nameSubCat;
-    setSelectedCategories(newSelectCat);
-    if (newSelectCat !== null) {
-      let slug = convertSlug(newSelectCat);
+    onSubCatClick(nameSubCat);
+
+    if (nameSubCat !== null) {
+      let slug = convertSlug(nameSubCat);
       navigate(`/product/${slug}`);
-    } else{
+    }
+    if (nameSubCat === selectedSubCategory) {
       navigate("/product/");
     }
   };
 
   const handleCatClick = (nameCat) => {
-    setSelectedCategories(null);
+    onCatClick(nameCat);
     let slug = convertSlug(nameCat);
     navigate(`/product/${slug}`);
   };
@@ -40,7 +40,6 @@ const FilterCatItem = (props) => {
             }}
           >
             <span>{cat.name}</span>
-            {/* <span className="float-right">(471)</span> */}
           </Link>
           <button
             className={` w-[20px]  ${
@@ -72,7 +71,7 @@ const FilterCatItem = (props) => {
               <li className="filter-sub-item" key={index}>
                 <Link
                   className={`custom-checkbox ${
-                    subCatItem.name === selectedCategories ? "checked" : ""
+                    subCatItem.name === selectedSubCategory ? "checked" : ""
                   }`}
                   onClick={(e) => {
                     e.preventDefault();

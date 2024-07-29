@@ -23,3 +23,5 @@ export const fetchDataById = async (endpoint, id) => {
     throw new Error(error.message);
   }
 };
+
+
