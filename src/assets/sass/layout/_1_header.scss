@@ -227,7 +227,6 @@ header {
         svg {
             height: 24px;
             width: 24px;
-            fill: none;
             vertical-align: middle;
         }
         span {
@@ -265,13 +264,11 @@ header {
 }
 
 .header-search {
-    margin: 0 45px;
-    position: relative;
     input {
         width: 100%;
-        padding: 16px 16px 16px 55px;
+        padding: 13px 16px 13px 55px;
         color: #222222;
-        border-radius: 16px;
+        border-radius: 50px;
         &:focus {
             box-shadow: none;
             outline: none;
@@ -279,8 +276,39 @@ header {
     }
     .search-btn {
         position: absolute;
-        left: 10px;
+        left: 16px;
         top: 50%;
         transform: translateY(-50%);
+        svg {
+            fill: $color-accent;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        background-size: auto;
+    }
+
+    header {
+        .logo {
+            flex: 1;
+            img {
+                max-width: 133px;
+            }
+        }
+        .menu {
+            display: none;
+            order: 3;
+        }
+        .search {
+            order: 4;
+            margin-bottom: 20px;
+            flex: 0 0 100%;
+        }
+        .actions {
+            flex: 1;
+            order: 2;
+        }
     }
 }

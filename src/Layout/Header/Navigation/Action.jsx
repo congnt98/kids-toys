@@ -69,7 +69,7 @@ const Action = () => {
   return (
     <>
       {actionList}
-      <Link to="" className="actions-btn actions-btn-menu d-block d-lg-none ">
+      <Link to="" className="actions-btn actions-btn-menu ">
         <GiHamburgerMenu />
       </Link>
     </>

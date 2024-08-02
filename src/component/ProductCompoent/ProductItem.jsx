@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 const ProductItem = (props) => {
   const { image, name, sku, vendor, price, sale } = props;
-  
+
   return (
-    
     <>
       <div className="product-item w-[calc(100%/3-8px)] mx-[4px] mb-6">
         <div className="product-header">

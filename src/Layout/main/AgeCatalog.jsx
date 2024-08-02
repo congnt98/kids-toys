@@ -5,11 +5,10 @@ import { useQuery } from "@tanstack/react-query";
 import AgeAPI from "api/AgeAPI";
 
 const AgeCatalog = () => {
-
-  const {data:AgeCatalogs} = useQuery({
-    queryKey:["age"],
-    queryFn :AgeAPI.getAllAge
-  })
+  const { data: AgeCatalogs } = useQuery({
+    queryKey: ["age"],
+    queryFn: AgeAPI.getAllAge,
+  });
 
   const res = {
     575: {

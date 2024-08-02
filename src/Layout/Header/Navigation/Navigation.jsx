@@ -7,20 +7,20 @@ import Search from "./Search";
 const Navigation = () => {
   return (
     <>
-      <div className="w-full flex-[0_1_180px]">
+      <div className="logo w-full flex-[0_1_180px]">
         <Link to="/">
-          <img src={logo} className="rounded mx-auto d-block" alt="..." />
+          <img src={logo} className="rounded  d-block" alt="..." />
         </Link>
       </div>
-      <div className="w-auto flex-[2_2_auto]">
+      <div className="search w-auto flex-[2_2_auto]">
         <Search />
       </div>
-      <div className="w-full  flex-[0_1_200px]">
+      <div className=" action w-full  flex-[0_1_200px]">
         <div className="actions">
           <Action />
         </div>
       </div>
-      <div className="d-none d-lg-block w-full ">
+      <div className="menu w-full ">
         <Menu />
       </div>
     </>

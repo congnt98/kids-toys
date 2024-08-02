@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PromotionalPrograms = () => {
+const PromotionalProgramsPage = () => {
   return (
     <>
       <div className="promotional-programs-page">
@@ -32,4 +32,4 @@ const PromotionalPrograms = () => {
   );
 };
 
-export default PromotionalPrograms;
+export default PromotionalProgramsPage;

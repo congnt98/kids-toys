@@ -14,14 +14,12 @@ export const fetchData = async (endpoint) => {
   }
 };
 
-// Hàm gọi API theo ID
-export const fetchDataById = async (endpoint, id) => {
+// Hàm tạo API
+export const createData = async (endpoint, data) => {
   try {
-    const response = await customAxios.get(`${endpoint}/${id}`);
+    const response = await customAxios.post(endpoint, data);
     return response.data;
   } catch (error) {
     throw new Error(error.message);
   }
 };
-
-

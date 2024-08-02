@@ -2,15 +2,15 @@ import { memo } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ROUTERS } from "./utils/router";
 import DefaultLayout from "Layout/customRouterLayout/DefaultLayout";
-import SidebarLayout from "Layout/customRouterLayout/SidebarLayout";
-import Homepage from "./pages/homepage/HomePage";
-import Product from "./pages/product/ProductPage";
-import Notfound from "./pages/notfound/NotFoundPage";
-import BrandsPage from "pages/brands/BrandsPage";
-import GuidesPage from "pages/guides/GuidesPage";
-import UpdatePage from "pages/update/UpdatePage";
+import Homepage from "./pages/HomePage/HomePage";
+import GuidesPage from "pages/GuidesPage/GuidesPage";
+import BrandsPage from "pages/BrandsPage/BrandsPage";
+import NotFoundLayout from "Layout/customRouterLayout/NotFoundLayout";
+import ProductPage from "pages/ProductPage/ProductPage";
+import UpdatePage from "pages/UpdatePage/UpdatePage";
+import AuthPage from "pages/AuthPage";
 
-const userRouter = [
+const userRoutes = [
   {
     path: ROUTERS.USER.HOME,
     component: <Homepage />,
@@ -18,13 +18,13 @@ const userRouter = [
   },
   {
     path: ROUTERS.USER.PRODUCT,
-    component: <Product />,
-    layout: SidebarLayout,
+    component: <ProductPage />,
+    layout: DefaultLayout,
   },
   {
     path: `/${ROUTERS.USER.PRODUCT}/:category`,
-    component: <Product />,
-    layout: SidebarLayout,
+    component: <ProductPage />,
+    layout: DefaultLayout,
   },
   {
     path: ROUTERS.USER.BRANDS,
@@ -42,47 +42,39 @@ const userRouter = [
     layout: DefaultLayout,
   },
   {
-    path: ROUTERS.USER.USER,
-    component: <UpdatePage />,
-    layout: DefaultLayout,
-  },
-  {
     path: ROUTERS.USER.CART,
     component: <UpdatePage />,
     layout: DefaultLayout,
   },
   {
+    path: ROUTERS.USER.USER,
+    component: <AuthPage />,
+    layout: DefaultLayout,
+  },
+  {
     path: ROUTERS.USER.NOTFOUND,
-    component: <Notfound />,
+    component: <NotFoundLayout />,
     layout: null,
   },
 ];
 
-const renderUserRouter = () => {
-  return (
-    <Routes>
-      {userRouter.map((item, index) => {
-        const Layout = item.layout === undefined ? DefaultLayout : item.layout;
-        return (
-          <Route
-            key={index}
-            path={item.path}
-            element={
-              Layout === null ? (
-                item.component
-              ) : (
-                <Layout>{item.component}</Layout>
-              )
-            }
-          />
-        );
-      })}
-    </Routes>
-  );
-};
+const renderUserRoutes = () => (
+  <Routes>
+    {userRoutes.map((route, index) => {
+      const Layout = route.layout || DefaultLayout;
+      return (
+        <Route
+          key={index}
+          path={route.path}
+          element={
+            Layout ? <Layout>{route.component}</Layout> : route.component
+          }
+        />
+      );
+    })}
+  </Routes>
+);
 
-const RouterCustom = () => {
-  return renderUserRouter();
-};
+const RouterCustom = () => renderUserRoutes();
 
 export default memo(RouterCustom);

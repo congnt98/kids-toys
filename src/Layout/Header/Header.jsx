@@ -109,7 +109,7 @@ export const Header = () => {
       <div className="header-bottom">
         <div className="header-sticky">
           <div className="container">
-            <div className="flex flex-wrap justify-between -mx-[15px] items-center ">
+            <div className="flex flex-wrap justify-between  items-center ">
               <Navigation />
             </div>
           </div>

@@ -14,6 +14,15 @@
     font-size: 16px;
     line-height: 14px;
     color: #8f8f8f;
+    overflow: hidden;
+}
+
+.product-footer {
+    display: flex;
+    flex-direction: column;
+    .product-info {
+        flex: 1;
+    }
 }
 
 .vendor-sku {
@@ -117,6 +126,11 @@
     position: relative;
     min-height: 225px;
     display: block;
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
 }
 .highlight-sale {
     transform: rotate(15deg);

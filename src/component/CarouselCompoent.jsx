@@ -50,7 +50,11 @@ const CarouselComponent = ({
         >
           {dataCarousel?.map((dataCarouselItem, index) => (
             <SwiperSlide key={index} virtualIndex={index}>
-              <CardImageItem dataCard={dataCarouselItem} />
+              <CardImageItem
+                name={dataCarouselItem.name}
+                image={dataCarouselItem.image}
+                path={dataCarouselItem.path}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

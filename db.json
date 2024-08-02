@@ -30,7 +30,7 @@
       "vendor": "vendor 1",
       "brand": "PEEK A BOO",
       "sku": "PAB015",
-      "price": 699.0,
+      "price": 699,
       "sale": 60,
       "wislist": 15,
       "wislist_status": 55,
@@ -47,7 +47,7 @@
       "vendor": "",
       "brand": "ROBOCAR POLI",
       "sku": "SKU ZR917",
-      "price": 179.0,
+      "price": 179,
       "sale": 65,
       "wislist": 22,
       "wislist_status": 85,
@@ -64,7 +64,7 @@
       "vendor": "sieu-robot",
       "brand": "MINIFORCE",
       "sku": "SKU ZR917",
-      "price": 810.0,
+      "price": 810,
       "sale": 70,
       "wislist": 30,
       "wislist_status": 90,
@@ -232,7 +232,7 @@
       "vendor": "vendor 11",
       "brand": "PLAYDOH",
       "sku": "SKU CBB5517-23241-33",
-      "price": 139.0,
+      "price": 139,
       "sale": 33,
       "wislist": 10,
       "wislist_status": 25,
@@ -352,20 +352,19 @@
         {
           "id": 1,
           "name": "Đồ chơi giáo dục",
-          "path": "/product/education",
-          "image": "",
+          "path": "/product/do-choi-giao-duc",
           "description": "Các loại đồ chơi giúp trẻ em phát triển kỹ năng và trí tuệ.",
           "subcategory": [
             {
               "id": 1,
               "name": "Sách giáo dục",
-              "path": "/product/books",
+              "path": "/product/sach-giao-duc",
               "description": "Sách và tài liệu giáo dục cho trẻ em."
             },
             {
               "id": 2,
               "name": "Đồ chơi sáng tạo",
-              "path": "/product/creative",
+              "path": "/product/do-choi-sang-tao",
               "description": "Đồ chơi khuyến khích sự sáng tạo của trẻ em."
             }
           ]
@@ -373,38 +372,37 @@
         {
           "id": 2,
           "name": "Đồ chơi ngoài trời",
-          "path": "/product/outdoor",
-          "image": "",
+          "path": "/product/do-choi-ngoai-troi",
           "description": "Đồ chơi cho các hoạt động ngoài trời.",
           "subcategory": [
             {
               "id": 1,
               "name": "Bóng đá",
-              "path": "/product/football",
+              "path": "/product/bong-da",
               "description": "Bóng đá và các phụ kiện liên quan."
             },
             {
               "id": 2,
               "name": "Xe đạp",
-              "path": "/product/bikes",
+              "path": "/product/xe-dap",
               "description": "Xe đạp và phụ kiện cho trẻ em."
             },
             {
               "id": 3,
               "name": "Cầu trượt",
-              "path": "/product/slides",
+              "path": "/product/cau-truot",
               "description": "Cầu trượt và bộ chơi ngoài trời."
             },
             {
               "id": 4,
               "name": "Bể bơi",
-              "path": "/product/pools",
+              "path": "/product/be-boi",
               "description": "Bể bơi và đồ chơi dưới nước."
             },
             {
               "id": 5,
               "name": "Đu quay",
-              "path": "/product/swings",
+              "path": "/product/du-quay",
               "description": "Đu quay và xích đu cho trẻ em."
             }
           ]
@@ -412,38 +410,37 @@
         {
           "id": 3,
           "name": "Đồ chơi mô hình",
-          "path": "/product/model",
-          "image": "",
+          "path": "/product/do-choi-mo-hinh",
           "description": "Đồ chơi mô hình các loại.",
           "subcategory": [
             {
               "id": 1,
               "name": "Mô hình xe hơi",
-              "path": "/product/cars",
+              "path": "/product/do-choi-xe-hoi",
               "description": "Mô hình xe hơi và phụ kiện."
             },
             {
               "id": 2,
               "name": "Mô hình máy bay",
-              "path": "/product/planes",
+              "path": "/product/mo-hinh-may-bay",
               "description": "Mô hình máy bay và phụ kiện."
             },
             {
               "id": 3,
               "name": "Mô hình tàu thuyền",
-              "path": "/product/ships",
+              "path": "/product/mo-hinh-tau-thuyen",
               "description": "Mô hình tàu thuyền và phụ kiện."
             },
             {
               "id": 4,
               "name": "Mô hình kiến trúc",
-              "path": "/product/architecture",
+              "path": "/product/mo-hinh-kien-truc",
               "description": "Mô hình các công trình kiến trúc nổi tiếng."
             },
             {
               "id": 5,
               "name": "Mô hình động vật",
-              "path": "/product/animals",
+              "path": "/product/mo-hinh-dong-vat",
               "description": "Mô hình các loài động vật."
             }
           ]
@@ -451,38 +448,37 @@
         {
           "id": 4,
           "name": "Đồ chơi điện tử",
-          "path": "/product/electronic",
-          "image": "",
+          "path": "/product/do-choi-dien-tu",
           "description": "Các loại đồ chơi điện tử và game cho trẻ em.",
           "subcategory": [
             {
               "id": 1,
               "name": "Máy chơi game cầm tay",
-              "path": "/product/handheld",
+              "path": "/product/may-choi-game-tay-cam",
               "description": "Máy chơi game di động cho trẻ em."
             },
             {
               "id": 2,
               "name": "Đồ chơi robot",
-              "path": "/product/robots",
+              "path": "/product/do-choi-robot",
               "description": "Robot điều khiển từ xa và robot giáo dục."
             },
             {
               "id": 3,
               "name": "Máy tính học tập",
-              "path": "/product/learning-computers",
+              "path": "/product/may-tinh-hoc-tap",
               "description": "Máy tính đồ chơi hỗ trợ học tập."
             },
             {
               "id": 4,
               "name": "Đồng hồ thông minh",
-              "path": "/product/smartwatches",
+              "path": "/product/do-ho-thong-minh",
               "description": "Đồng hồ thông minh cho trẻ em."
             },
             {
               "id": 5,
               "name": "Drone đồ chơi",
-              "path": "/product/drones",
+              "path": "/product/drone-do-choi",
               "description": "Drone điều khiển từ xa cho trẻ em."
             }
           ]
@@ -490,26 +486,25 @@
         {
           "id": 5,
           "name": "Đồ chơi xây dựng",
-          "path": "/product/construction",
-          "image": "",
+          "path": "/product/do-choi-xay-dung",
           "description": "Đồ chơi xây dựng và lắp ráp cho trẻ em.",
           "subcategory": [
             {
               "id": 1,
               "name": "Bộ xếp hình",
-              "path": "/product/building-blocks",
+              "path": "/product/bo-xep-hinh",
               "description": "Các bộ xếp hình và gạch lắp ráp."
             },
             {
               "id": 2,
               "name": "Bộ dụng cụ xây dựng",
-              "path": "/product/tool-sets",
+              "path": "/product/bo-dung-cu-xay-dung",
               "description": "Bộ dụng cụ xây dựng đồ chơi cho trẻ em."
             },
             {
               "id": 3,
               "name": "Mô hình kiến trúc",
-              "path": "/product/architecture",
+              "path": "/product/mo-hinh-kien-truc",
               "description": "Bộ xây dựng mô hình kiến trúc."
             },
             {
@@ -521,7 +516,7 @@
             {
               "id": 5,
               "name": "Bộ lắp ráp cơ khí",
-              "path": "/product/mechanical",
+              "path": "/product/bo-lap-rap-co-khi",
               "description": "Bộ lắp ráp cơ khí và kỹ thuật."
             }
           ]
@@ -529,38 +524,37 @@
         {
           "id": 6,
           "name": "Búp bê và nhân vật",
-          "path": "/product/dolls-figures",
-          "image": "",
+          "path": "/product/bup-be-nhan-vat",
           "description": "Búp bê, nhân vật hành động và phụ kiện.",
           "subcategory": [
             {
               "id": 1,
               "name": "Búp bê",
-              "path": "/product/dolls",
+              "path": "/product/bup-be",
               "description": "Các loại búp bê và phụ kiện."
             },
             {
               "id": 2,
               "name": "Nhân vật hành động",
-              "path": "/product/action-figures",
+              "path": "/product/nhan-vat-hanh-dong",
               "description": "Nhân vật hành động từ phim ảnh và truyện tranh."
             },
             {
               "id": 3,
               "name": "Nhà búp bê",
-              "path": "/product/dollhouses",
+              "path": "/product/nha-bup-be",
               "description": "Nhà và nội thất cho búp bê."
             },
             {
               "id": 4,
               "name": "Bộ sưu tập nhân vật",
-              "path": "/product/collectibles",
+              "path": "/product/bo-sau-toc-nhan-vat",
               "description": "Nhân vật sưu tập và phiên bản giới hạn."
             },
             {
               "id": 5,
               "name": "Phụ kiện búp bê",
-              "path": "/product/accessories",
+              "path": "/product/phu-kien-bup-be",
               "description": "Quần áo và phụ kiện cho búp bê."
             }
           ]
@@ -568,37 +562,37 @@
         {
           "id": 7,
           "name": "Đồ chơi âm nhạc",
-          "path": "/product/musical",
+          "path": "/product/do-choi-am-nhac",
           "description": "Nhạc cụ và đồ chơi âm nhạc cho trẻ em.",
           "subcategory": [
             {
               "id": 1,
               "name": "Nhạc cụ đồ chơi",
-              "path": "/product/instruments",
+              "path": "/product/nhac-cu-do-choi",
               "description": "Các loại nhạc cụ đồ chơi cho trẻ em."
             },
             {
               "id": 2,
               "name": "Đồ chơi karaoke",
-              "path": "/product/karaoke",
+              "path": "/product/do-choi-karaok",
               "description": "Micro và bộ karaoke cho trẻ em."
             },
             {
               "id": 3,
               "name": "Nhạc cụ điện tử",
-              "path": "/product/electronic",
+              "path": "/product/nhac-cu-dien-tu",
               "description": "Nhạc cụ điện tử cho trẻ em."
             },
             {
               "id": 4,
               "name": "Bộ gõ",
-              "path": "/product/percussion",
+              "path": "/product/bo-go",
               "description": "Bộ gõ và nhạc cụ gõ cho trẻ em."
             },
             {
               "id": 5,
               "name": "Sách nhạc",
-              "path": "/product/music-books",
+              "path": "/product/sach-nhac",
               "description": "Sách và tài liệu học nhạc cho trẻ em."
             }
           ]
@@ -675,20 +669,20 @@
     {
       "id": 1,
       "name": "Đồ chơi giáo dục",
-      "path": "/product/education",
+      "path": "/product/do-choi-giao-duc",
       "image": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_m_m_non.jpg?v=1694141939",
       "description": "Các loại đồ chơi giúp trẻ em phát triển kỹ năng và trí tuệ.",
       "subcategory": [
         {
           "id": 1,
           "name": "Sách giáo dục",
-          "path": "/product/books",
+          "path": "/product/sach-giao-duc",
           "description": "Sách và tài liệu giáo dục cho trẻ em."
         },
         {
           "id": 2,
           "name": "Đồ chơi sáng tạo",
-          "path": "/product/creative",
+          "path": "/product/do-choi-sang-tao",
           "description": "Đồ chơi khuyến khích sự sáng tạo của trẻ em."
         }
       ]
@@ -696,38 +690,38 @@
     {
       "id": 2,
       "name": "Đồ chơi ngoài trời",
-      "path": "/product/outdoor",
+      "path": "/product/do-choi-ngoai-troi",
       "image": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_ph_ng_ti_n.jpg?v=1694141939",
       "description": "Đồ chơi cho các hoạt động ngoài trời.",
       "subcategory": [
         {
           "id": 1,
           "name": "Bóng đá",
-          "path": "/product/football",
+          "path": "/product/bong-da",
           "description": "Bóng đá và các phụ kiện liên quan."
         },
         {
           "id": 2,
           "name": "Xe đạp",
-          "path": "/product/bikes",
+          "path": "/product/xe-dap",
           "description": "Xe đạp và phụ kiện cho trẻ em."
         },
         {
           "id": 3,
           "name": "Cầu trượt",
-          "path": "/product/slides",
+          "path": "/product/cau-truot",
           "description": "Cầu trượt và bộ chơi ngoài trời."
         },
         {
           "id": 4,
           "name": "Bể bơi",
-          "path": "/product/pools",
+          "path": "/product/be-boi",
           "description": "Bể bơi và đồ chơi dưới nước."
         },
         {
           "id": 5,
           "name": "Đu quay",
-          "path": "/product/swings",
+          "path": "/product/du-quay",
           "description": "Đu quay và xích đu cho trẻ em."
         }
       ]
@@ -735,38 +729,38 @@
     {
       "id": 3,
       "name": "Đồ chơi mô hình",
-      "path": "/product/model",
+      "path": "/product/do-choi-mo-hinh",
       "image": "https://www.mykingdom.com.vn/cdn/shop/files/D_ch_i_l_p_ghep.jpg?v=1694141939",
       "description": "Đồ chơi mô hình các loại.",
       "subcategory": [
         {
           "id": 1,
           "name": "Mô hình xe hơi",
-          "path": "/product/cars",
+          "path": "/product/do-choi-xe-hoi",
           "description": "Mô hình xe hơi và phụ kiện."
         },
         {
           "id": 2,
           "name": "Mô hình máy bay",
-          "path": "/product/planes",
+          "path": "/product/mo-hinh-may-bay",
           "description": "Mô hình máy bay và phụ kiện."
         },
         {
           "id": 3,
           "name": "Mô hình tàu thuyền",
-          "path": "/product/ships",
+          "path": "/product/mo-hinh-tau-thuyen",
           "description": "Mô hình tàu thuyền và phụ kiện."
         },
         {
           "id": 4,
           "name": "Mô hình kiến trúc",
-          "path": "/product/architecture",
+          "path": "/product/mo-hinh-kien-truc",
           "description": "Mô hình các công trình kiến trúc nổi tiếng."
         },
         {
           "id": 5,
           "name": "Mô hình động vật",
-          "path": "/product/animals",
+          "path": "/product/mo-hinh-dong-vat",
           "description": "Mô hình các loài động vật."
         }
       ]
@@ -774,38 +768,38 @@
     {
       "id": 4,
       "name": "Đồ chơi điện tử",
-      "path": "/product/electronic",
+      "path": "/product/do-choi-dien-tu",
       "image": "https://www.mykingdom.com.vn/cdn/shop/files/Robot.jpg?v=1694141940",
       "description": "Các loại đồ chơi điện tử và game cho trẻ em.",
       "subcategory": [
         {
           "id": 1,
           "name": "Máy chơi game cầm tay",
-          "path": "/product/handheld",
+          "path": "/product/may-choi-game-tay-cam",
           "description": "Máy chơi game di động cho trẻ em."
         },
         {
           "id": 2,
           "name": "Đồ chơi robot",
-          "path": "/product/robots",
+          "path": "/product/do-choi-robot",
           "description": "Robot điều khiển từ xa và robot giáo dục."
         },
         {
           "id": 3,
           "name": "Máy tính học tập",
-          "path": "/product/learning-computers",
+          "path": "/product/may-tinh-hoc-tap",
           "description": "Máy tính đồ chơi hỗ trợ học tập."
         },
         {
           "id": 4,
           "name": "Đồng hồ thông minh",
-          "path": "/product/smartwatches",
+          "path": "/product/do-ho-thong-minh",
           "description": "Đồng hồ thông minh cho trẻ em."
         },
         {
           "id": 5,
           "name": "Drone đồ chơi",
-          "path": "/product/drones",
+          "path": "/product/drone-do-choi",
           "description": "Drone điều khiển từ xa cho trẻ em."
         }
       ]
@@ -813,26 +807,26 @@
     {
       "id": 5,
       "name": "Đồ chơi xây dựng",
-      "path": "/product/construction",
+      "path": "/product/do-choi-xay-dung",
       "image": "https://png.pngtree.com/thumb_back/fw800/background/20231221/pngtree-3d-three-dimensional-building-block-toys-image_15549351.png",
       "description": "Đồ chơi xây dựng và lắp ráp cho trẻ em.",
       "subcategory": [
         {
           "id": 1,
           "name": "Bộ xếp hình",
-          "path": "/product/building-blocks",
+          "path": "/product/bo-xep-hinh",
           "description": "Các bộ xếp hình và gạch lắp ráp."
         },
         {
           "id": 2,
           "name": "Bộ dụng cụ xây dựng",
-          "path": "/product/tool-sets",
+          "path": "/product/bo-dung-cu-xay-dung",
           "description": "Bộ dụng cụ xây dựng đồ chơi cho trẻ em."
         },
         {
           "id": 3,
           "name": "Mô hình kiến trúc",
-          "path": "/product/architecture",
+          "path": "/product/mo-hinh-kien-truc",
           "description": "Bộ xây dựng mô hình kiến trúc."
         },
         {
@@ -844,7 +838,7 @@
         {
           "id": 5,
           "name": "Bộ lắp ráp cơ khí",
-          "path": "/product/mechanical",
+          "path": "/product/bo-lap-rap-co-khi",
           "description": "Bộ lắp ráp cơ khí và kỹ thuật."
         }
       ]
@@ -852,38 +846,38 @@
     {
       "id": 6,
       "name": "Búp bê và nhân vật",
-      "path": "/product/dolls-figures",
+      "path": "/product/bup-be-nhan-vat",
       "image": "https://www.mykingdom.com.vn/cdn/shop/files/Bup_be.jpg?v=1694141939",
       "description": "Búp bê, nhân vật hành động và phụ kiện.",
       "subcategory": [
         {
           "id": 1,
           "name": "Búp bê",
-          "path": "/product/dolls",
+          "path": "/product/bup-be",
           "description": "Các loại búp bê và phụ kiện."
         },
         {
           "id": 2,
           "name": "Nhân vật hành động",
-          "path": "/product/action-figures",
+          "path": "/product/nhan-vat-hanh-dong",
           "description": "Nhân vật hành động từ phim ảnh và truyện tranh."
         },
         {
           "id": 3,
           "name": "Nhà búp bê",
-          "path": "/product/dollhouses",
+          "path": "/product/nha-bup-be",
           "description": "Nhà và nội thất cho búp bê."
         },
         {
           "id": 4,
           "name": "Bộ sưu tập nhân vật",
-          "path": "/product/collectibles",
+          "path": "/product/bo-sau-toc-nhan-vat",
           "description": "Nhân vật sưu tập và phiên bản giới hạn."
         },
         {
           "id": 5,
           "name": "Phụ kiện búp bê",
-          "path": "/product/accessories",
+          "path": "/product/phu-kien-bup-be",
           "description": "Quần áo và phụ kiện cho búp bê."
         }
       ]
@@ -891,37 +885,37 @@
     {
       "id": 7,
       "name": "Đồ chơi âm nhạc",
-      "path": "/product/musical",
+      "path": "/product/do-choi-am-nhac",
       "description": "Nhạc cụ và đồ chơi âm nhạc cho trẻ em.",
       "subcategory": [
         {
           "id": 1,
           "name": "Nhạc cụ đồ chơi",
-          "path": "/product/instruments",
+          "path": "/product/nhac-cu-do-choi",
           "description": "Các loại nhạc cụ đồ chơi cho trẻ em."
         },
         {
           "id": 2,
           "name": "Đồ chơi karaoke",
-          "path": "/product/karaoke",
+          "path": "/product/do-choi-karaok",
           "description": "Micro và bộ karaoke cho trẻ em."
         },
         {
           "id": 3,
           "name": "Nhạc cụ điện tử",
-          "path": "/product/electronic",
+          "path": "/product/nhac-cu-dien-tu",
           "description": "Nhạc cụ điện tử cho trẻ em."
         },
         {
           "id": 4,
           "name": "Bộ gõ",
-          "path": "/product/percussion",
+          "path": "/product/bo-go",
           "description": "Bộ gõ và nhạc cụ gõ cho trẻ em."
         },
         {
           "id": 5,
           "name": "Sách nhạc",
-          "path": "/product/music-books",
+          "path": "/product/sach-nhac",
           "description": "Sách và tài liệu học nhạc cho trẻ em."
         }
       ]
@@ -1003,6 +997,14 @@
     {
       "name": "CityLego",
       "logo": "https://example.com/citylego-logo.png"
+    }
+  ],
+  "users": [
+    {
+      "id": "lzasyfb9uxlk58om79j",
+      "name": "usertest",
+      "email": "ntcong.exe@gmail.com",
+      "password": "@Congnt106388"
     }
   ]
 }

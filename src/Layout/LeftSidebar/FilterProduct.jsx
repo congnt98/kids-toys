@@ -6,21 +6,21 @@ import CategoryAPI from "api/CategoryAPI";
 const FilterProduct = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  const {
+    isLoading,
+    error,
+    data: dataCategory,
+  } = useQuery({
+    queryKey: ["category"],
+    queryFn: CategoryAPI.getAllCategory,
+  });
+
   const handleSubCatClick = (nameSubCat) => {
     setSelectedCategory(nameSubCat === selectedCategory ? null : nameSubCat);
   };
   const handleCatClick = (nameCat) => {
     setSelectedCategory(nameCat === selectedCategory ? null : nameCat);
   };
-
-  const {
-    isLoading,
-    error,
-    data: dataCategory,
-  } = useQuery({
-    queryKey: ["banners"],
-    queryFn: CategoryAPI.getAllCategory,
-  });
 
   if (isLoading) {
     return <div>Loading...</div>;

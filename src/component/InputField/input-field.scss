@@ -1,0 +1,41 @@
+$color-white: #f0f0f0;
+$color-accent: #cf102d;
+
+/* Mũi tên cho tooltip */
+.input-container {
+    position: relative;
+    width: 100%;
+    input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .error-tooltip {
+        opacity: 1;
+    }
+}
+.error-tooltip {
+    position: absolute;
+    top: 70%;
+    left: 0px;
+    background-color: $color-accent;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 9px;
+        margin-top: -10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent $color-accent transparent;
+    }
+}

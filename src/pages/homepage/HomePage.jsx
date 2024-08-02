@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "react-multi-carousel/lib/styles.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-import FeaturedCategories from "Layout/main/FeaturedCategories";
-import Banner from "Layout/main/Banner";
-import AgeCatalog from "Layout/main/AgeCatalog";
+import FeaturedCategories from "Layout/Main/FeaturedCategories";
+import Banner from "Layout/Main/Banner";
+import AgeCatalog from "Layout/Main/AgeCatalog";
 
 const HomePage = () => {
   return (
@@ -23,8 +23,7 @@ const HomePage = () => {
       </section>
 
       <section className="section-product-catalog">
-        <div className="container">
-        </div>
+        <div className="container"></div>
       </section>
 
       <section className="section-sex-catalog">

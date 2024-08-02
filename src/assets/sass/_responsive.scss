@@ -39,6 +39,15 @@
         margin-top: -45px;
         left: -20px;
     }
+
+    .actions .actions-btn.actions-btn-menu {
+        display: none;
+    }
+
+    .header-search {
+        margin: 0 45px;
+        position: relative;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -56,6 +65,26 @@
         &.custom-prev {
             width: 48px;
             left: 0;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .product-list {
+        margin: 0;
+        .product-item {
+            flex: 0 0 100%;
+            margin: 0;
+        }
+    }
+
+  
+}
+@media (max-width: 767px) {
+    .custom-swiper {
+        .custom-next,
+        .custom-prev {
+            display: none;
         }
     }
 }
