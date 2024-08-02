@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const customAxios = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: "https://wl5h64-3001.csb.app/",
 });
 
 // Hàm gọi API chung
