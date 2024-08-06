@@ -3,11 +3,15 @@ import "swiper/css/scrollbar";
 import CarouselComponent from "component/CarouselCompoent";
 import { useQuery } from "@tanstack/react-query";
 import AgeAPI from "api/AgeAPI";
+import Loader from "component/Loading";
 
 const AgeCatalog = () => {
-  const { data: AgeCatalogs } = useQuery({
+  const { data: AgeCatalogs, isLoading } = useQuery({
     queryKey: ["age"],
     queryFn: AgeAPI.getAllAge,
+    staleTime: 60000,
+    cacheTime: 3600000,
+    refetchOnWindowFocus: false
   });
 
   const res = {
@@ -27,6 +31,8 @@ const AgeCatalog = () => {
       slidesPerView: 4,
     },
   };
+
+  if (isLoading) return <Loader />;
 
   return (
     <>

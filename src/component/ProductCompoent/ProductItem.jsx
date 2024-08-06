@@ -1,8 +1,26 @@
+import { useUser } from "context/UserContext";
 import React from "react";
 import { Link } from "react-router-dom";
+import { generateUniqueId } from "utils/stringUtils";
 const ProductItem = (props) => {
   const { image, name, sku, vendor, price, sale } = props;
 
+  const { addToCart } = useUser();
+
+  const handleAddToCart = () => {
+    const newid = generateUniqueId()
+    const product = {
+      id: newid,
+      image,
+      name,
+      vendor,
+      price: price - price * (sale / 100),
+      salePrice: price,
+      sale,
+      quantity: 1, // Initial quantity
+    };
+    addToCart(product);
+  };
   return (
     <>
       <div className="product-item w-[calc(100%/3-8px)] mx-[4px] mb-6">
@@ -14,7 +32,7 @@ const ProductItem = (props) => {
             </span>
           </Link>
         </div>
-        <Link className="product-footer">
+        <div className="product-footer">
           <div className="product-info">
             <div className="vendor-sku">
               <div className="vendor">{vendor}</div>
@@ -30,7 +48,9 @@ const ProductItem = (props) => {
             </div>
           </div>
           <div className="product-link">
-            <div className="add-product">Thêm Vào Giỏ Hàng</div>
+            <div className="add-product" onClick={handleAddToCart}>
+              Thêm Vào Giỏ Hàng
+            </div>
             <div className="wishlist">
               <button className="btn-wishlist active">
                 <span className="swym-tooltip swym-inject">
@@ -39,7 +59,7 @@ const ProductItem = (props) => {
               </button>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
     </>
   );

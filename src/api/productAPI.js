@@ -1,4 +1,4 @@
-import { fetchData } from "./axios";
+import { fetchData, fetchDataByCat } from "./axios";
 
 const ProductAPI = {
   getAllProducts: async () => {
@@ -13,7 +13,7 @@ const ProductAPI = {
 
   getProductsByCategory: async (category) => {
     try {
-      const data = await fetchData(`/products?category=${category}`);
+      const data = await fetchDataByCat("products", category);
       return data;
     } catch (error) {
       console.error(

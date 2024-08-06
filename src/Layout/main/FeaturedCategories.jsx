@@ -2,19 +2,19 @@ import { CardImageItem } from "component/CardImageItem";
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import CategoryAPI from "api/CategoryAPI";
+import Loader from "component/Loading";
 
 const FeaturedCategories = () => {
-  const { data, error, isLoading } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["category"],
     queryFn: CategoryAPI.getAllCategory,
+    staleTime: 60000,
+    cacheTime: 3600000,
+    refetchOnWindowFocus: false
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
+    return <Loader />;
   }
 
   return (

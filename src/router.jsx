@@ -9,6 +9,7 @@ import NotFoundLayout from "Layout/customRouterLayout/NotFoundLayout";
 import ProductPage from "pages/ProductPage/ProductPage";
 import UpdatePage from "pages/UpdatePage/UpdatePage";
 import AuthPage from "pages/AuthPage";
+import CartPage from "pages/CartPage";
 
 const userRoutes = [
   {
@@ -43,7 +44,7 @@ const userRoutes = [
   },
   {
     path: ROUTERS.USER.CART,
-    component: <UpdatePage />,
+    component: <CartPage />,
     layout: DefaultLayout,
   },
   {

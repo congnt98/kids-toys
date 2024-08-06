@@ -9,6 +9,7 @@ import { MdOutlineGridOn } from "react-icons/md";
 import Dropdown from "component/Dropdown";
 import { parseAge, sortArr } from "utils/stringUtils";
 import FilterProduct from "Layout/LeftSidebar/FilterProduct";
+import Loader from "component/Loading";
 
 const ProductPage = () => {
   const [viewMode, setViewMode] = useState("grid-three");
@@ -24,31 +25,31 @@ const ProductPage = () => {
     { value: "desc", label: "Z to A" },
   ];
 
-  const { data: products } = useQuery({
-    queryKey: ["allProduct"],
-    queryFn: ProductAPI.getAllProducts,
-  });
+  const queryKey = useMemo(() => {
+    if (location.pathname === "/product/new") return ["productNewArrivals"];
+    if (location.pathname === "/product/sale") return ["productBigSale"];
+    if (category) return ["productsByCategory", category];
+    return ["Products"];
+  }, [category, location.pathname]);
+  const queryFn = useMemo(() => {
+    if (location.pathname === "/product/new") return ProductAPI.getNewArrivals;
+    if (location.pathname === "/product/sale")
+      return ProductAPI.getProductBigSale;
+    if (category) return () => ProductAPI.getProductsByCategory(category);
+    return ProductAPI.getAllProducts;
+  }, [category, location.pathname]);
 
-  const { data: productsByCategory } = useQuery({
-    queryKey: ["productsByCategory", category],
-    queryFn: () => ProductAPI.getProductsByCategory(category),
-    enabled: !!category,
-  });
-
-  const { data: productNewArrivals } = useQuery({
-    queryKey: ["productNewArrivals"],
-    queryFn: ProductAPI.getNewArrivals,
-    enabled: location.pathname === "/product/new",
-  });
-
-  const { data: productBigSale } = useQuery({
-    queryKey: ["productBigSale"],
-    queryFn: ProductAPI.getProductBigSale,
+  const { data: products, isLoading ,error} = useQuery({
+    queryKey,
+    queryFn,
+    enabled: queryKey.length > 0,
+    staleTime: 60000,
+    cacheTime: 3600000,
+    refetchOnWindowFocus: false
   });
 
   const filteredProducts = useMemo(() => {
     let productList = products;
-
     if (ageParam) {
       const [filterAgeMin, filterAgeMax] = parseAge(ageParam);
       productList = productList?.filter((product) => {
@@ -58,29 +59,17 @@ const ProductPage = () => {
           (filterAgeMax === Infinity || filterAgeMax >= productAgeMin)
         );
       });
-    } else if (location.pathname.startsWith("/product/sale"))
-      return (productList = productBigSale);
-    else if (location.pathname.startsWith("/product/new"))
-      return (productList = productNewArrivals);
-    else if (category) return (productList = productsByCategory);
-
+    }
     return sortArr(productList, "name", sortProduct);
-  }, [
-    ageParam,
-    category,
-    location.pathname,
-    productBigSale,
-    productNewArrivals,
-    products,
-    productsByCategory,
-    sortProduct,
-  ]);
+  }, [ageParam, products, sortProduct]);
 
   const filteredProductCount = filteredProducts ? filteredProducts.length : 0;
 
   const handleViewChange = (mode) => {
     setViewMode(mode);
   };
+
+  if (isLoading) return <Loader />;
 
   return (
     <>
@@ -134,7 +123,7 @@ const ProductPage = () => {
             <div
               className={`product-list flex flex-wrap mx-[-8px] ${viewMode}`}
             >
-              <ProductList data={filteredProducts} />
+              <ProductList data={filteredProducts}  error={error}/>
             </div>
           </div>
         </div>

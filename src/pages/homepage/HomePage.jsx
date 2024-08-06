@@ -1,7 +1,4 @@
 import { memo } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "react-multi-carousel/lib/styles.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 import FeaturedCategories from "Layout/Main/FeaturedCategories";

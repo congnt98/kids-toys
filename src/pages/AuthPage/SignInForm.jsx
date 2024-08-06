@@ -4,10 +4,13 @@ import { useForm } from "react-hook-form";
 import { InputWithError } from "component/InputField";
 import UserAPI from "api/UserAPI";
 import { useNotification } from "context/NotificationContext";
+import { useUser } from "context/UserContext";
 
 const SignInForm = () => {
   const { showNotification } = useNotification();
   const navigate = useNavigate();
+  const { login } = useUser();
+
   const {
     register: registerSignIn,
     handleSubmit: handleSubmitSignIn,
@@ -17,17 +20,10 @@ const SignInForm = () => {
   const handleSignIn = async (data) => {
     try {
       const user = UserAPI.login(data.email, data.password);
-
-      // Lưu token hoặc thông tin người dùng vào localStorage hoặc context
-      localStorage.setItem("user", JSON.stringify(user));
-
-      // Hiển thị thông báo đăng nhập thành công
-      showNotification("Đăng nhập thành công!", "success");
-
-      // Điều hướng đến trang dashboard hoặc trang chính
+      login(user);
       navigate("/");
+      showNotification("Đăng nhập thành công!", "success");
     } catch (error) {
-      // Xử lý lỗi và hiển thị thông báo lỗi
       showNotification(
         "Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.",
         "error"
@@ -39,7 +35,7 @@ const SignInForm = () => {
     <div className="form-container sign-in-container">
       <form onSubmit={handleSubmitSignIn(handleSignIn)}>
         <h1>Sign In</h1>
-        <div className="social-container">
+        {/* <div className="social-container">
           <Link to="#" className="social">
             <i className="fab fa-facebook-f"></i>
           </Link>
@@ -49,7 +45,7 @@ const SignInForm = () => {
           <Link to="#" className="social">
             <i className="fab fa-linkedin-in"></i>
           </Link>
-        </div>
+        </div> */}
         <span>or use your account</span>
         <InputWithError
           type="email"

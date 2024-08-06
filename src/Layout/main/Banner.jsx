@@ -6,11 +6,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useQuery } from "@tanstack/react-query";
 import bannerAPI from "api/bannerAPI";
+import Loader from "component/Loading";
 
 const Banner = () => {
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["banners"],
     queryFn: bannerAPI.getAllBanner,
+    staleTime: 60000,
+    cacheTime: 3600000,
+    refetchOnWindowFocus: false
   });
 
   const prevRef = useRef(null);
@@ -26,6 +30,8 @@ const Banner = () => {
       swiper.navigation.update();
     }
   }, [data]);
+
+  if (isLoading) return <Loader/>;
 
   return (
     <div className="custom-swiper">

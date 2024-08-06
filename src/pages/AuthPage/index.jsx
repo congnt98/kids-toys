@@ -3,7 +3,6 @@
  * 1. create ui
  * 2. validate form using react-hook-form
  * 3. post user (useMutation, check data null => create context notification, show message)
- * 4.
  */
 
 import React, { useState } from "react";

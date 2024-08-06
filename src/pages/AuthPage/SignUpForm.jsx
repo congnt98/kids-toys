@@ -1,11 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { InputWithError } from "component/InputField";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { generateUniqueId } from "utils/stringUtils";
 import UserAPI from "api/UserAPI";
 import { useNotification } from "context/NotificationContext";
 import { useMutation } from "@tanstack/react-query";
+import SocialSinUp from "./SocialSinUp";
 
 const SignUpForm = () => {
   const { showNotification } = useNotification();
@@ -36,7 +37,6 @@ const SignUpForm = () => {
 
   const handleSignUp = async (data) => {
     const newId = generateUniqueId();
-
     const user = {
       id: newId,
       name: data.name,
@@ -64,17 +64,7 @@ const SignUpForm = () => {
       <div className="form-container sign-up-container">
         <form onSubmit={handleSubmitSignUp(handleSignUp)}>
           <h1>Create Account</h1>
-          <div className="social-container">
-            <Link to="#" className="social">
-              <i className="fab fa-facebook-f"></i>
-            </Link>
-            <Link to="#" className="social">
-              <i className="fab fa-google-plus-g"></i>
-            </Link>
-            <Link to="#" className="social">
-              <i className="fab fa-linkedin-in"></i>
-            </Link>
-          </div>
+          <SocialSinUp />
           <span>or use your email for registration</span>
           <InputWithError
             type="text"

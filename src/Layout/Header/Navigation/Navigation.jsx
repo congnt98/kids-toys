@@ -3,8 +3,15 @@ import Action from "./Action";
 import Menu from "../menu/Menu";
 import { Link } from "react-router-dom";
 import Search from "./Search";
+import { useState } from "react";
 
 const Navigation = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <>
       <div className="logo w-full flex-[0_1_180px]">
@@ -17,11 +24,11 @@ const Navigation = () => {
       </div>
       <div className=" action w-full  flex-[0_1_200px]">
         <div className="actions">
-          <Action />
+          <Action menuToggle={handleMenuToggle} />
         </div>
       </div>
-      <div className="menu w-full ">
-        <Menu />
+      <div className={`menu w-full ${menuOpen ? "show" : "hide"}`}>
+        <Menu menuToggle={handleMenuToggle} />
       </div>
     </>
   );

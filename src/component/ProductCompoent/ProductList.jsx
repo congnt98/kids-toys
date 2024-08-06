@@ -2,7 +2,14 @@ import React from "react";
 import { ProductItem } from ".";
 
 const ProductList = (props) => {
-  const { data } = props;
+  const { data, error } = props;
+  if (error) {
+    return (
+      <p className="text-center text-red-500 mt-4">
+        Đã xảy ra lỗi: {error.message}
+      </p>
+    );
+  }
   return (
     <>
       {data?.length > 0 ? (

@@ -1,6 +1,24 @@
-import { createData, fetchData } from "./axios";
+import { createData, fetchData, fetchDataById } from "./axios";
 
 const UserAPI = {
+  getAllUser: async () => {
+    try {
+      const data = await fetchData("/users");
+      return data;
+    } catch (error) {
+      console.error("Failed to fetch users", error);
+      throw error;
+    }
+  },
+  getUserById: async (userId) => {
+    try {
+      const data = await fetchDataById("/users", userId );
+      return data;
+    } catch (error) {
+      console.error("Failed to fetch users", error);
+      throw error;
+    }
+  },
   postUser: async (userData) => {
     return createData("/users", userData);
   },

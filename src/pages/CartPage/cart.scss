@@ -1,0 +1,71 @@
+// Variables
+$font-family: Arial, sans-serif;
+$primary-color: #4caf50;
+$border-color: #ddd;
+$background-color: #fff;
+
+// Mixins
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+        color: $primary-color;
+    }
+}
+
+.cart-item {
+    border: 1px solid $border-color;
+    padding: 10px;
+    margin-bottom: 20px;
+    @include flex-between;
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.cart-item-price {
+    margin: 0;
+    font-weight: bold;
+    color: $primary-color;
+}
+
+.cart-total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.btn {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}

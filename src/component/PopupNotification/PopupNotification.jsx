@@ -45,11 +45,7 @@ const PopupNotification = () => {
         <div className="toast-content">
           {icon}
           <div className="message">
-            <span className="text text-2">
-              {notification.message} {notification.message}
-              {notification.message}
-              {notification.message}
-            </span>
+            <span className="text text-2">{notification.message}</span>
           </div>
         </div>
         <i className="fa-solid fa-xmark close" onClick={hideNotification}></i>
