@@ -1,15 +1,14 @@
 import React from "react";
 import "swiper/css/scrollbar";
-import CarouselComponent from "component/CarouselCompoent";
 import { useQuery } from "@tanstack/react-query";
-import AgeAPI from "api/AgeAPI";
+import CarouselComponent from "@components/CarouselComponent";
+import AgeAPI from "@api/AgeAPI";
 
 const AgeCatalog = () => {
-
-  const {data:AgeCatalogs} = useQuery({
-    queryKey:["age"],
-    queryFn :AgeAPI.getAllAge
-  })
+  const { data: AgeCatalogs } = useQuery({
+    queryKey: ["age"],
+    queryFn: AgeAPI.getAllAge,
+  });
 
   const res = {
     575: {

@@ -1,5 +1,5 @@
-import { Footer } from "Layout/Footer";
-import { Header } from "Layout/Header/Header";
+import { Footer } from "@Layout/Footer";
+import { Header } from "@Layout/Header/Header";
 import React from "react";
 
 const DefaultLayout = ({ children, ...pros }) => {

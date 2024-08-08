@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import FilterCatItem from "component/FilterCatItem";
 import { useQuery } from "@tanstack/react-query";
-import CategoryAPI from "api/CategoryAPI";
+import FilterCatItem from "@components/FilterCatItem";
+import CategoryAPI from "@api/CategoryAPI";
 
 const FilterProduct = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);

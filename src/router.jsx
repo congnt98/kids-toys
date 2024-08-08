@@ -1,19 +1,19 @@
+import DefaultLayout from "@Layout/customRouterLayout/DefaultLayout";
+import NotFoundLayout from "@Layout/customRouterLayout/NotFoundLayout";
+import SidebarLayout from "@Layout/customRouterLayout/SidebarLayout";
+import BrandsPage from "@pages/brands/BrandsPage";
+import GuidesPage from "@pages/guides/GuidesPage";
+import HomePage from "@pages/homepage/HomePage";
+import Product from "@pages/product/ProductPage";
+import UpdatePage from "@pages/update/UpdatePage";
+import { ROUTERS } from "@utils/router";
 import { memo } from "react";
 import { Route, Routes } from "react-router-dom";
-import { ROUTERS } from "./utils/router";
-import DefaultLayout from "Layout/customRouterLayout/DefaultLayout";
-import SidebarLayout from "Layout/customRouterLayout/SidebarLayout";
-import Homepage from "./pages/homepage/HomePage";
-import Product from "./pages/product/ProductPage";
-import Notfound from "./pages/notfound/NotFoundPage";
-import BrandsPage from "pages/brands/BrandsPage";
-import GuidesPage from "pages/guides/GuidesPage";
-import UpdatePage from "pages/update/UpdatePage";
 
 const userRouter = [
   {
     path: ROUTERS.USER.HOME,
-    component: <Homepage />,
+    component: <HomePage />,
     layout: DefaultLayout,
   },
   {
@@ -53,7 +53,7 @@ const userRouter = [
   },
   {
     path: ROUTERS.USER.NOTFOUND,
-    component: <Notfound />,
+    component: <NotFoundLayout />,
     layout: null,
   },
 ];

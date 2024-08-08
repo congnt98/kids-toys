@@ -2,7 +2,7 @@ import React from "react";
 import { Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/scrollbar";
-import { CardImageItem } from "component/CardImageItem";
+import { CardImageItem } from "@components/CardImageItem";
 
 const CarouselComponent = ({
   dataCarousel,

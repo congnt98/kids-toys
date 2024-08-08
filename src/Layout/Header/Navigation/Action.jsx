@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { ActionsItem } from "assets/images/icon/ActionItem";
+import { ActionsItem } from "@assets/images/icon/ActionItem";
 
 const Action = () => {
   const [actions] = useState([

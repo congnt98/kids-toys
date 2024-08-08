@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useQuery } from "@tanstack/react-query";
-import bannerAPI from "api/bannerAPI";
+import bannerAPI from "@api/bannerAPI";
 
 const Banner = () => {
   const { data } = useQuery({

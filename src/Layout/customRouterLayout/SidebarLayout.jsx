@@ -1,6 +1,6 @@
-import { Footer } from "Layout/Footer";
-import { Header } from "Layout/Header/Header";
-import FilterProduct from "Layout/LeftSidebar/FilterProduct";
+import { Footer } from "@Layout/Footer";
+import { Header } from "@Layout/Header/Header";
+import FilterProduct from "@Layout/LeftSidebar/FilterProduct";
 import React from "react";
 
 const SidebarLayout = ({ children, ...props }) => {

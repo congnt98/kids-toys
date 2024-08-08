@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { convertSlug } from "utils/stringUtils";
+import { convertSlug } from "@utils/stringUtils";
 
 export const CardImageItem = (props) => {
   const { dataCard, className } = props;

@@ -1,7 +1,7 @@
-import { CardImageItem } from "component/CardImageItem";
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import CategoryAPI from "api/CategoryAPI";
+import CategoryAPI from "@api/CategoryAPI";
+import { CardImageItem } from "@components/CardImageItem";
 
 const FeaturedCategories = () => {
   const { data, error, isLoading } = useQuery({

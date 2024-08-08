@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaCaretDown } from "react-icons/fa6";
 import { useQuery } from "@tanstack/react-query";
-import MenuAPI from "api/Menu";
+import MenuAPI from "@api/Menu";
 
 const Menu = () => {
   const { data: dataMenu } = useQuery({

@@ -1,6 +1,8 @@
+import { convertSlug } from "@utils/stringUtils";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { convertSlug } from "utils/stringUtils";
+
+
 const FilterCatItem = (props) => {
   const [hide, setHide] = useState(false);
   const { cat, subCat, onSubCatClick, onCatClick, selectedSubCategory } = props;

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import ProductItem from "component/ProductItem";
 import { useQuery } from "@tanstack/react-query";
-import ProductAPI from "api/ProductAPI";
 import { useLocation, useParams } from "react-router-dom";
 import { CiGrid41 } from "react-icons/ci";
 import { Tooltip } from "react-tooltip";
 import { MdOutlineGridOn } from "react-icons/md";
-import Dropdown from "component/Dropdown";
-import { parseAge, sortArr } from "utils/stringUtils";
+import Dropdown from "@components/Dropdown";
+import { parseAge, sortArr } from "@utils/stringUtils";
+import ProductAPI from "@api/productAPI";
+import ProductItem from "@components/ProductItem";
 
 const Product = () => {
   const [viewMode, setViewMode] = useState("grid-three");

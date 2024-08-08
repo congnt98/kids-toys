@@ -1,5 +1,5 @@
+import BrandsAPI from "@api/BrandsAPI";
 import { useQuery } from "@tanstack/react-query";
-import BrandsAPI from "api/BrandsAPI";
 import React from "react";
 import { Link } from "react-router-dom";
 
