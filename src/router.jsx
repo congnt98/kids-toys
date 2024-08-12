@@ -22,11 +22,11 @@ const userRoutes = [
     component: <ProductPage />,
     layout: DefaultLayout,
   },
-  // {
-  //   path: `/${ROUTERS.USER.PRODUCT}/:category`,
-  //   component: <ProductPage />,
-  //   layout: DefaultLayout,
-  // },
+  {
+    path: `/${ROUTERS.USER.PRODUCT}/:category`,
+    component: <ProductPage />,
+    layout: DefaultLayout,
+  },
   {
     path: ROUTERS.USER.BRANDS,
     component: <BrandsPage />,
@@ -44,7 +44,7 @@ const userRoutes = [
   },
   {
     path: ROUTERS.USER.CART,
-    component: <CartPage />,
+    component: <UpdatePage />,
     layout: DefaultLayout,
   },
   {
