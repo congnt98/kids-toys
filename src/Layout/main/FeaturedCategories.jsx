@@ -10,7 +10,7 @@ const FeaturedCategories = () => {
     queryFn: CategoryAPI.getAllCategory,
     staleTime: 60000,
     cacheTime: 3600000,
-    refetchOnWindowFocus: false
+    refetchOnWindowFocus: false,
   });
 
   if (isLoading) {

@@ -6,22 +6,22 @@ const FilterCatItem = (props) => {
   const { cat, subCat, onSubCatClick, onCatClick, selectedSubCategory } = props;
   const navigate = useNavigate();
 
-  const handleSubCatClick = (nameSubCat) => {
-    onSubCatClick(nameSubCat);
+  const handleSubCatClick = (subCatItem) => {
+    onSubCatClick(subCatItem);
 
-    if (nameSubCat !== null) {
-      let slug = convertSlug(nameSubCat);
-      navigate(`/product/${slug}`);
+    if (subCatItem !== null) {
+      let slug = convertSlug(subCatItem.name);
+      navigate(`/product?subcategory=${slug}`);
     }
-    if (nameSubCat === selectedSubCategory) {
+    if (subCatItem.name === selectedSubCategory) {
       navigate("/product/");
     }
   };
 
-  const handleCatClick = (nameCat) => {
-    onCatClick(nameCat);
-    let slug = convertSlug(nameCat);
-    navigate(`/product/${slug}`);
+  const handleCatClick = (cat) => {
+    onCatClick(cat);
+    let slug = convertSlug(cat.name);
+    navigate(`/product?category=${slug}`);
   };
 
   const handleButtonClick = () => {
@@ -36,7 +36,7 @@ const FilterCatItem = (props) => {
             className="block w-[92%]"
             onClick={(e) => {
               e.preventDefault();
-              handleCatClick(cat.name);
+              handleCatClick(cat);
             }}
           >
             <span>{cat.name}</span>
@@ -75,7 +75,7 @@ const FilterCatItem = (props) => {
                   }`}
                   onClick={(e) => {
                     e.preventDefault();
-                    handleSubCatClick(subCatItem.name);
+                    handleSubCatClick(subCatItem);
                   }}
                 >
                   <span className="sub-name">{subCatItem.name}</span>

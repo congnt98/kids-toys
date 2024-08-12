@@ -15,8 +15,10 @@ const FilterProduct = () => {
     queryFn: CategoryAPI.getAllCategory,
   });
 
-  const handleSubCatClick = (nameSubCat) => {
-    setSelectedCategory(nameSubCat === selectedCategory ? null : nameSubCat);
+  const handleSubCatClick = (subCatItem) => {
+    setSelectedCategory(
+      subCatItem.name === selectedCategory ? null : subCatItem.name
+    );
   };
   const handleCatClick = (nameCat) => {
     setSelectedCategory(nameCat === selectedCategory ? null : nameCat);

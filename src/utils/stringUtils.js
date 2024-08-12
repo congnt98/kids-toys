@@ -16,10 +16,15 @@ export const removeAccents = (str) => {
 
 export const convertSlug = (str) => {
   return str
-    .toLowerCase()
-    .replace(/ /g, "-")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+    .toLowerCase() // Chuyển tất cả thành chữ thường
+    .normalize("NFD") // Phân tách ký tự có dấu thành ký tự cơ bản và dấu
+    .replace(/[\u0300-\u036f]/g, "") // Loại bỏ các dấu diacritics
+    .replace(/đ/g, "d") // Thay thế đ thành d
+    .replace(/Đ/g, "D") // Thay thế Đ thành D
+    .replace(/[^a-z0-9\s-]/g, "") // Loại bỏ các ký tự không phải chữ cái, số, khoảng trắng hoặc dấu gạch ngang
+    .trim() // Loại bỏ khoảng trắng ở đầu và cuối chuỗi
+    .replace(/\s+/g, "-") // Thay thế tất cả các khoảng trắng liên tiếp bằng dấu gạch ngang
+    .replace(/^-+|-+$/g, ""); // Loại bỏ dấu gạch ngang ở đầu và cuối chuỗi
 };
 
 export const parseAge = (ageString) => {

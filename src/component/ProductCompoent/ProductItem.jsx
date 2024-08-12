@@ -8,15 +8,16 @@ const ProductItem = (props) => {
   const { addToCart } = useUser();
 
   const handleAddToCart = () => {
-    const newid = generateUniqueId()
+    const newid = generateUniqueId();
     const product = {
       id: newid,
-      image,
       name,
-      vendor,
       price: price - price * (sale / 100),
       salePrice: price,
       sale,
+      image,
+      vendor,
+      sku,
       quantity: 1, // Initial quantity
     };
     addToCart(product);

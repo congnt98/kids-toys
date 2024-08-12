@@ -1,9 +1,9 @@
 import { memo } from "react";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-import FeaturedCategories from "Layout/Main/FeaturedCategories";
-import Banner from "Layout/Main/Banner";
-import AgeCatalog from "Layout/Main/AgeCatalog";
+import Banner from "Layout/main/Banner";
+import FeaturedCategories from "Layout/main/FeaturedCategories";
+import AgeCatalog from "Layout/main/AgeCatalog";
 
 const HomePage = () => {
   return (
