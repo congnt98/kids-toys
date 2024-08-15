@@ -27,7 +27,7 @@ const FeaturedCategories = () => {
         </div>
       </div>
       <div className="card-items w-full flex flex-wrap">
-        {data?.slice(0, 6).map((card, index) => (
+        {data?.slice(0, 3).map((card, index) => (
           <CardImageItem
             key={index}
             image={card.image}

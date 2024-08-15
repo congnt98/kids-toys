@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./assets/sass/main.scss";
 import { NotificationProvider } from "context/NotificationContext";
 import { UserProvider } from "context/UserContext";
+import ScrollToTop from "component/ScrollToTop/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ root.render(
     <QueryClientProvider client={queryClient}>
       <NotificationProvider>
         <HashRouter>
+          <ScrollToTop />
           <RouterCustom />
         </HashRouter>
       </NotificationProvider>
