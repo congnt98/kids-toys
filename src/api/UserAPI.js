@@ -12,7 +12,7 @@ const UserAPI = {
   },
   getUserById: async (userId) => {
     try {
-      const data = await fetchDataById("/users", userId );
+      const data = await fetchDataById("/users", userId);
       return data;
     } catch (error) {
       console.error("Failed to fetch users", error);
@@ -31,15 +31,9 @@ const UserAPI = {
     return users.some((user) => user.id === id);
   },
   login: async (email, password) => {
-    // Gọi API để lấy danh sách người dùng
     const response = await fetchData("/users", {
-      params: {
-        email,
-        password,
-      },
+      params: { email, password },
     });
-
-    // Trả về dữ liệu người dùng nếu tìm thấy
     if (response.length > 0) {
       return response[0]; // Trả về người dùng đầu tiên tìm thấy
     } else {

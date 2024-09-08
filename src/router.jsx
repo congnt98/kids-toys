@@ -44,7 +44,7 @@ const userRoutes = [
   },
   {
     path: ROUTERS.USER.CART,
-    component: <UpdatePage />,
+    component: <CartPage />,
     layout: DefaultLayout,
   },
   {

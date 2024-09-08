@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 export const CardImageItem = (props) => {
   const { name, path, image, className } = props;
-  console.log(path);
 
   return (
     <>

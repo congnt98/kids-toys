@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { InputWithError } from "component/InputField";
-import UserAPI from "api/UserAPI";
 import { useNotification } from "context/NotificationContext";
 import { useUser } from "context/UserContext";
 
@@ -17,13 +16,13 @@ const SignInForm = () => {
     formState: { errors: errorsSignIn },
   } = useForm();
 
-  const handleSignIn = async (data) => {
-    try {
-      const user = UserAPI.login(data.email, data.password);
-      login(user);
-      navigate("/");
-      showNotification("Đăng nhập thành công!", "success");
-    } catch (error) {
+  const handleSignIn = async (user) => {
+    const success = await login(user);
+
+    if (success) {
+      navigate("/"); // Chuyển hướng đến trang chính
+      showNotification("Đăng nhập thành công!", "success"); // Hiển thị thông báo thành công
+    } else {
       showNotification(
         "Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.",
         "error"
@@ -35,17 +34,6 @@ const SignInForm = () => {
     <div className="form-container sign-in-container">
       <form onSubmit={handleSubmitSignIn(handleSignIn)}>
         <h1>Sign In</h1>
-        {/* <div className="social-container">
-          <Link to="#" className="social">
-            <i className="fab fa-facebook-f"></i>
-          </Link>
-          <Link to="#" className="social">
-            <i className="fab fa-google-plus-g"></i>
-          </Link>
-          <Link to="#" className="social">
-            <i className="fab fa-linkedin-in"></i>
-          </Link>
-        </div> */}
         <span>or use your account</span>
         <InputWithError
           type="email"

@@ -1,4 +1,4 @@
-// UserContext.js
+import UserAPI from "api/UserAPI";
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 const UserContext = createContext();
@@ -16,28 +16,49 @@ export const UserProvider = ({ children }) => {
     setCart(storedCart ? JSON.parse(storedCart) : []);
   }, []);
 
-  const login = (user) => {
-    localStorage.setItem("user", JSON.stringify(user));
-    setIsAuthenticated(true);
+  const login = async (user) => {
+    try {
+      const response = await UserAPI.login(user.email, user.password);
+      if (response) {
+        setIsAuthenticated(true);
+        localStorage.setItem("user", JSON.stringify(response));
+        return true;
+      } else {
+        throw new Error("Invalid credentials");
+      }
+    } catch (error) {
+      console.error("Login error: ", error);
+      setIsAuthenticated(false);
+      return false;
+    }
   };
 
   const logout = () => {
     localStorage.removeItem("user");
     setIsAuthenticated(false);
     setCart([]);
+    localStorage.removeItem("cart");
   };
 
   const addToCart = (product) => {
     setCart((prevCart) => {
-      const updatedCart = Array.isArray(prevCart)
-        ? [...prevCart, product]
-        : [product];
+      const existingProduct = prevCart.find((item) => item.id === product.id);
+      let updatedCart;
+      if (existingProduct) {
+        updatedCart = prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        updatedCart = [...prevCart, { ...product, quantity: 1 }];
+      }
       localStorage.setItem("cart", JSON.stringify(updatedCart));
       return updatedCart;
     });
   };
 
-  const removeCart = (productId) => {
+  const removeFromCart = (productId) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.filter(
         (product) => product.id !== productId
@@ -47,7 +68,7 @@ export const UserProvider = ({ children }) => {
     });
   };
 
-  const updateCart = (productId, newQuantity) => {
+  const updateQuantity = (productId, newQuantity) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.map((product) =>
         product.id === productId
@@ -59,6 +80,15 @@ export const UserProvider = ({ children }) => {
     });
   };
 
+  const clearCart = () => {
+    setCart([]);
+    localStorage.removeItem("cart");
+  };
+
+  const getCartTotal = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
   return (
     <UserContext.Provider
       value={{
@@ -67,11 +97,15 @@ export const UserProvider = ({ children }) => {
         logout,
         cart,
         addToCart,
-        removeCart,
-        updateCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        getCartTotal,
       }}
     >
       {children}
     </UserContext.Provider>
   );
 };
+
+export default UserProvider;

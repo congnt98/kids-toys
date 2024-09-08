@@ -9,7 +9,6 @@ import {
   FaHeart,
   FaLinkedinIn,
   FaPhone,
-  FaVideo,
   FaYoutube,
 } from "react-icons/fa";
 
@@ -31,10 +30,10 @@ export const Footer = () => {
                       aria-label="Facebook"
                       data-social="Facebook"
                     >
-                      <div class="filled"></div>
+                      <div className="filled"></div>
                       <FaFacebook />
                     </Link>
-                    <div class="tooltip">Facebook</div>
+                    <div className="tooltip">Facebook</div>
                   </li>
                   <li className="icon-content">
                     <Link
@@ -43,10 +42,10 @@ export const Footer = () => {
                       aria-label="Twitter"
                       data-social="Twitter"
                     >
-                      <div class="filled"></div>
+                      <div className="filled"></div>
                       <FaXTwitter />
                     </Link>
-                    <div class="tooltip">Twitter</div>
+                    <div className="tooltip">Twitter</div>
                   </li>
                   <li className="icon-content">
                     <Link
@@ -55,10 +54,10 @@ export const Footer = () => {
                       aria-label="LinkedinIn"
                       data-social="LinkedinIn"
                     >
-                      <div class="filled"></div>
+                      <div className="filled"></div>
                       <FaLinkedinIn />
                     </Link>
-                    <div class="tooltip">LinkedinIn</div>
+                    <div className="tooltip">LinkedinIn</div>
                   </li>
                   <li className="icon-content">
                     <Link
@@ -67,10 +66,10 @@ export const Footer = () => {
                       aria-label="Youtube"
                       data-social="Youtube"
                     >
-                      <div class="filled"></div>
+                      <div className="filled"></div>
                       <FaYoutube />
                     </Link>
-                    <div class="tooltip">Youtube</div>
+                    <div className="tooltip">Youtube</div>
                   </li>
                 </ul>
               </div>
@@ -121,17 +120,17 @@ export const Footer = () => {
                 <h2 className="widget-title">Signup for newsletter</h2>
                 <div className="widget-body">
                   <div className="newsletter-form-wrap pt-1">
-                    <div class="input-group">
+                    <div className="input-group">
                       <input
                         type="email"
-                        class="input"
+                        className="input"
                         id="Email"
                         name="Email"
                         placeholder="uiverse@verse.io"
-                        autocomplete="off"
+                        autoComplete="off"
                       />
                       <input
-                        class="button--submit"
+                        className="button--submit"
                         value="Subscribe"
                         type="submit"
                       />

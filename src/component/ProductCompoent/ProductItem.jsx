@@ -1,3 +1,4 @@
+import { useNotification } from "context/NotificationContext";
 import { useUser } from "context/UserContext";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -6,6 +7,7 @@ const ProductItem = (props) => {
   const { image, name, sku, vendor, price, sale } = props;
 
   const { addToCart } = useUser();
+  const { showNotification } = useNotification();
 
   const handleAddToCart = () => {
     const newid = generateUniqueId();
@@ -21,6 +23,12 @@ const ProductItem = (props) => {
       quantity: 1, // Initial quantity
     };
     addToCart(product);
+    showNotification(`Đã thêm "${name}" vào giỏ hàng thành công`, "success");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Cuộn mượt mà lên đầu trang
+    });
   };
   return (
     <>
