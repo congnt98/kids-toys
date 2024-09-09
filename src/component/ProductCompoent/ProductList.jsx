@@ -13,9 +13,10 @@ const ProductList = (props) => {
   return (
     <>
       {data?.length > 0 ? (
-        data.map((item) => (
+        data.map((item, index) => (
           <ProductItem
-            key={item.id}
+            key={index}
+            id={item.id}
             image={item.image}
             name={item.name}
             sku={item.sku}

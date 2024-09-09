@@ -30,7 +30,7 @@ export const remove = async (endpoint, id) => {
   try {
     // Nối id vào URL
     const response = await customAxios.delete(`${endpoint}/${id}`);
-    console.log("Xóa sản phẩm thành công:", response.data);
+    // console.log("Xóa sản phẩm thành công:", response.data);
     return response.data; // Trả về dữ liệu từ response nếu cần sử dụng
   } catch (error) {
     console.error("Lỗi khi xóa sản phẩm:", error);
@@ -40,11 +40,11 @@ export const remove = async (endpoint, id) => {
 
 export const update = async (endpoint, data) => {
   try {
-    const response = await customAxios.put(endpoint, data);
-    console.log("Cập nhật thành công:", response.data);
+    const response = await customAxios.patch(endpoint, data);
+    // console.log("Cập nhật thành công:", response.data);
     return response; // Trả về dữ liệu từ response
   } catch (error) {
-    console.error("Lỗi khi cập nhật dữ liệu:", error);
+    // console.error("Lỗi khi cập nhật dữ liệu:", error);
     throw error; // Ném lỗi để xử lý tại nơi gọi hàm nếu cần
   }
 };
@@ -52,10 +52,10 @@ export const update = async (endpoint, data) => {
 export const clearApi = async (endpoint) => {
   try {
     const response = await customAxios.delete(endpoint);
-    console.log("Cập nhật thành công:", response.data);
+    // console.log("Cập nhật thành công:", response.data);
     return response; // Trả về dữ liệu từ response
   } catch (error) {
-    console.error("Lỗi khi cập nhật dữ liệu:", error);
+    // console.error("Lỗi khi cập nhật dữ liệu:", error);
     throw error; // Ném lỗi để xử lý tại nơi gọi hàm nếu cần
   }
 };

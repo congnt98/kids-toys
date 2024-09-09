@@ -42,6 +42,7 @@ const SignUpForm = () => {
       name: data.name,
       email: data.email,
       password: data.password,
+      cart: [],
     };
 
     const userExistsByName = await UserAPI.checkUserByName(user.name);

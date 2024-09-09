@@ -8,19 +8,22 @@ import "./assets/sass/main.scss";
 import { NotificationProvider } from "context/NotificationContext";
 import { UserProvider } from "context/UserContext";
 import ScrollToTop from "component/ScrollToTop/ScrollToTop";
+import { CartProvider } from "context/CartContext";
 
 const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <UserProvider>
-    <QueryClientProvider client={queryClient}>
-      <NotificationProvider>
-        <HashRouter>
-          <ScrollToTop />
-          <RouterCustom />
-        </HashRouter>
-      </NotificationProvider>
-    </QueryClientProvider>
+    <CartProvider>
+      <QueryClientProvider client={queryClient}>
+        <NotificationProvider>
+          <HashRouter>
+            <ScrollToTop />
+            <RouterCustom />
+          </HashRouter>
+        </NotificationProvider>
+      </QueryClientProvider>
+    </CartProvider>
   </UserProvider>
 );

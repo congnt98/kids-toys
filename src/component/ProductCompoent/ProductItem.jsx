@@ -1,18 +1,16 @@
+import { useCart } from "context/CartContext";
 import { useNotification } from "context/NotificationContext";
-import { useUser } from "context/UserContext";
 import React from "react";
 import { Link } from "react-router-dom";
-import { generateUniqueId } from "utils/stringUtils";
 const ProductItem = (props) => {
-  const { image, name, sku, vendor, price, sale } = props;
+  const { id, image, name, sku, vendor, price, sale } = props;
 
-  const { addToCart } = useUser();
+  const { addToCart } = useCart();
   const { showNotification } = useNotification();
 
   const handleAddToCart = () => {
-    const newid = generateUniqueId();
     const product = {
-      id: newid,
+      id: id,
       name,
       price: price - price * (sale / 100),
       salePrice: price,
